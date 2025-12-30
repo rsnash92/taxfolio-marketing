@@ -3,41 +3,56 @@ import { cn } from "@/lib/utils"
 
 const plans = [
   {
-    name: "Free",
+    name: "Free Trial",
     price: "£0",
-    period: "/month",
-    description: "Perfect for getting started",
+    period: "/30 days",
+    description: "Try all Pro features free",
     features: [
-      { text: "1 bank account", included: true },
+      { text: "All Pro features for 30 days", included: true },
+      { text: "1 bank connection", included: true },
       { text: "100 transactions/month", included: true },
       { text: "AI categorisation", included: true },
-      { text: "Basic tax summary", included: true },
-      { text: "MTD quarterly view", included: false },
-      { text: "CSV export", included: false },
-      { text: "Priority support", included: false },
+      { text: "No credit card required", included: true },
     ],
-    cta: "Start Free",
+    cta: "Start Free Trial",
+    ctaVariant: "outline" as const,
+    popular: false,
+  },
+  {
+    name: "Lite",
+    price: "£49.99",
+    period: "/year",
+    description: "Perfect for simple freelancers",
+    features: [
+      { text: "1 bank connection", included: true },
+      { text: "100 transactions/month", included: true },
+      { text: "AI categorisation", included: true },
+      { text: "Full SA103 breakdown", included: true },
+      { text: "SA105 (Landlords)", included: false },
+      { text: "MTD quarterly breakdown", included: false },
+      { text: "CSV/PDF export", included: false },
+    ],
+    cta: "Get Lite",
     ctaVariant: "outline" as const,
     popular: false,
   },
   {
     name: "Pro",
-    price: "£4.99",
-    period: "/month",
-    description: "For serious freelancers",
+    price: "£89.99",
+    period: "/year",
+    description: "For landlords & serious freelancers",
     features: [
-      { text: "Unlimited bank accounts", included: true },
+      { text: "Unlimited bank connections", included: true },
       { text: "Unlimited transactions", included: true },
       { text: "AI categorisation", included: true },
-      { text: "Full SA103/SA105 summary", included: true },
-      { text: "MTD quarterly breakdowns", included: true },
-      { text: "Unlimited exports", included: true },
+      { text: "Full SA103 & SA105", included: true },
+      { text: "MTD quarterly breakdown", included: true },
+      { text: "CSV & PDF export", included: true },
       { text: "Priority support", included: true },
     ],
-    cta: "Start Pro Trial",
+    cta: "Get Pro",
     ctaVariant: "default" as const,
     popular: true,
-    trial: "14 days free",
   },
 ]
 
@@ -52,7 +67,7 @@ export function Pricing() {
           Start free, upgrade when you need more. No hidden fees.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
           {plans.map((plan) => (
             <div
               key={plan.name}
@@ -108,10 +123,6 @@ export function Pricing() {
                   {plan.cta.toUpperCase()}
                 </button>
               </a>
-
-              {plan.trial && (
-                <p className="text-center text-zinc-500 text-xs mt-3">{plan.trial}</p>
-              )}
             </div>
           ))}
         </div>
