@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, CheckCircle2, Shield, Smartphone } from "lucide-react"
+import { CheckCircle2, Shield, Smartphone } from "lucide-react"
 
 export function Hero() {
   const scrollToFeatures = () => {
@@ -43,9 +43,8 @@ export function Hero() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <a href="https://app.taxfolio.io/signup">
-            <button className="btn-brand flex items-center gap-2 text-lg">
+            <button className="btn-brand text-lg">
               GET STARTED FREE
-              <ArrowRight className="w-5 h-5" />
             </button>
           </a>
           <button

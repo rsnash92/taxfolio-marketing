@@ -1,4 +1,4 @@
-import { ArrowRight, Shield, Smartphone } from "lucide-react"
+import { Shield, Smartphone } from "lucide-react"
 
 export function FinalCTA() {
   return (
@@ -13,9 +13,8 @@ export function FinalCTA() {
 
         <div className="flex justify-center mb-10">
           <a href="https://app.taxfolio.io/signup">
-            <button className="btn-brand inline-flex items-center gap-2 text-lg">
+            <button className="btn-brand text-lg">
               GET STARTED FREE
-              <ArrowRight className="w-5 h-5" />
             </button>
           </a>
         </div>
