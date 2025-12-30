@@ -3,22 +3,6 @@ import { cn } from "@/lib/utils"
 
 const plans = [
   {
-    name: "Free Trial",
-    price: "£0",
-    period: "/30 days",
-    description: "Try all Pro features free",
-    features: [
-      { text: "All Pro features for 30 days", included: true },
-      { text: "1 bank connection", included: true },
-      { text: "100 transactions/month", included: true },
-      { text: "AI categorisation", included: true },
-      { text: "No credit card required", included: true },
-    ],
-    cta: "Start Free Trial",
-    ctaVariant: "outline" as const,
-    popular: false,
-  },
-  {
     name: "Lite",
     price: "£49.99",
     period: "/year",
@@ -32,7 +16,7 @@ const plans = [
       { text: "MTD quarterly breakdown", included: false },
       { text: "CSV/PDF export", included: false },
     ],
-    cta: "Get Lite",
+    cta: "Start Free Trial",
     ctaVariant: "outline" as const,
     popular: false,
   },
@@ -50,7 +34,7 @@ const plans = [
       { text: "CSV & PDF export", included: true },
       { text: "Priority support", included: true },
     ],
-    cta: "Get Pro",
+    cta: "Start Free Trial",
     ctaVariant: "default" as const,
     popular: true,
   },
@@ -67,7 +51,7 @@ export function Pricing() {
           Start free, upgrade when you need more. No hidden fees.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
           {plans.map((plan) => (
             <div
               key={plan.name}
