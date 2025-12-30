@@ -5,7 +5,7 @@ import { ArrowLeft, Check, PoundSterling, Shield, Award, Building2, HeartHandsha
 
 export const metadata: Metadata = {
   title: "Accountant Partner Program - TaxFolio",
-  description: "Partner with TaxFolio and earn 30% recurring commission. Exclusive benefits for accountants and bookkeepers.",
+  description: "Partner with TaxFolio and earn 60% recurring commission. Exclusive benefits for accountants and bookkeepers.",
 }
 
 export default function AccountantsPage() {
@@ -43,7 +43,7 @@ export default function AccountantsPage() {
             Accountant Partner Program
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Help Your Clients.<br />Earn 40% Commission.
+            Help Your Clients.<br />Earn 60% Commission.
           </h1>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto mb-8">
             Partner with TaxFolio to help your freelance and landlord clients stay organised.
@@ -62,9 +62,9 @@ export default function AccountantsPage() {
             <div className="w-12 h-12 bg-[#15e49e]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
               <PoundSterling className="w-6 h-6 text-[#15e49e]" />
             </div>
-            <div className="text-3xl font-bold text-white mb-1">40%</div>
+            <div className="text-3xl font-bold text-white mb-1">60%</div>
             <div className="text-zinc-400 text-sm">Commission Rate</div>
-            <div className="text-[#15e49e] text-xs mt-1">15% more than affiliates</div>
+            <div className="text-[#15e49e] text-xs mt-1">35% more than affiliates</div>
           </div>
           <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6 text-center">
             <div className="w-12 h-12 bg-[#15e49e]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -126,7 +126,7 @@ export default function AccountantsPage() {
                 Add Revenue Stream
               </h3>
               <p className="text-zinc-400 text-sm">
-                Earn 40% commission on every client subscription. Turn recommendations
+                Earn 60% commission on every client subscription. Turn recommendations
                 into recurring revenue for your practice.
               </p>
             </div>
@@ -172,7 +172,7 @@ export default function AccountantsPage() {
               </div>
               <h3 className="font-semibold text-white mb-2">Earn Monthly</h3>
               <p className="text-zinc-400 text-sm">
-                Receive 40% of every payment, paid monthly via bank transfer.
+                Receive 60% of every payment, paid monthly via bank transfer.
               </p>
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function AccountantsPage() {
                 <h3 className="font-semibold text-white">Higher Commission</h3>
               </div>
               <p className="text-zinc-400 text-sm">
-                Earn 40% vs 25% standard affiliate rate. Your professional recommendation
+                Earn 60% vs 25% standard affiliate rate. Your professional recommendation
                 is worth more.
               </p>
             </div>
@@ -261,20 +261,20 @@ export default function AccountantsPage() {
             Potential Earnings
           </h2>
           <p className="text-zinc-400 mb-8 max-w-xl mx-auto">
-            With 40% commission on TaxFolio Pro (£129.99/year), here&apos;s what you could earn:
+            With 60% commission on TaxFolio Pro (£129.99/year), here&apos;s what you could earn:
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
               <div className="text-zinc-400 text-sm mb-2">10 Clients</div>
-              <div className="text-2xl font-bold text-[#15e49e]">£520/year</div>
+              <div className="text-2xl font-bold text-[#15e49e]">£780/year</div>
             </div>
             <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
               <div className="text-zinc-400 text-sm mb-2">25 Clients</div>
-              <div className="text-2xl font-bold text-[#15e49e]">£1,300/year</div>
+              <div className="text-2xl font-bold text-[#15e49e]">£1,950/year</div>
             </div>
             <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
               <div className="text-zinc-400 text-sm mb-2">50 Clients</div>
-              <div className="text-2xl font-bold text-[#15e49e]">£2,600/year</div>
+              <div className="text-2xl font-bold text-[#15e49e]">£3,900/year</div>
             </div>
           </div>
           <p className="text-zinc-500 text-sm mt-4">
