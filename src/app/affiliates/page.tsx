@@ -201,20 +201,20 @@ export default function AffiliatesPage() {
             Potential Earnings
           </h2>
           <p className="text-zinc-400 mb-8 max-w-xl mx-auto">
-            With TaxFolio Pro at £89.99/year and 25% commission, here&apos;s what you could earn:
+            With TaxFolio Pro at £129.99/year and 25% commission, here&apos;s what you could earn:
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
               <div className="text-zinc-400 text-sm mb-2">10 Referrals</div>
-              <div className="text-2xl font-bold text-[#15e49e]">£225/year</div>
+              <div className="text-2xl font-bold text-[#15e49e]">£325/year</div>
             </div>
             <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
               <div className="text-zinc-400 text-sm mb-2">50 Referrals</div>
-              <div className="text-2xl font-bold text-[#15e49e]">£1,125/year</div>
+              <div className="text-2xl font-bold text-[#15e49e]">£1,625/year</div>
             </div>
             <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
               <div className="text-zinc-400 text-sm mb-2">100 Referrals</div>
-              <div className="text-2xl font-bold text-[#15e49e]">£2,250/year</div>
+              <div className="text-2xl font-bold text-[#15e49e]">£3,250/year</div>
             </div>
           </div>
           <p className="text-zinc-500 text-sm mt-4">

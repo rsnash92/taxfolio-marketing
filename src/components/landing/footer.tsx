@@ -5,13 +5,14 @@ const footerLinks = {
   product: [
     { label: "Features", href: "#features" },
     { label: "Pricing", href: "/pricing" },
-    { label: "Login", href: "/login" },
-    { label: "Sign Up", href: "/signup" },
+    { label: "Login", href: "https://app.taxfolio.io/login" },
+    { label: "Sign Up", href: "https://app.taxfolio.io/signup" },
   ],
   resources: [
     { label: "Help Centre", href: "#" },
     { label: "MTD Guide", href: "#" },
-    { label: "Blog", href: "#" },
+    { label: "Affiliates", href: "/affiliates" },
+    { label: "For Accountants", href: "/accountants" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
