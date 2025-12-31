@@ -18,6 +18,7 @@ const footerLinks = {
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
     { label: "Cookie Policy", href: "/cookies" },
+    { label: "Disclaimer", href: "/disclaimer" },
   ],
 }
 
@@ -95,13 +96,28 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-zinc-800 pt-8">
+        <div className="border-t border-zinc-800 pt-8 space-y-4">
+          {/* Company and copyright */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-zinc-500 text-sm">
-              © 2025 TaxFolio. Made in the UK 🇬🇧
+            <div className="text-center md:text-left">
+              <p className="text-zinc-500 text-sm">
+                © 2025 TAXFOLIO LTD. Made in the UK 🇬🇧
+              </p>
+              <p className="text-zinc-600 text-xs mt-1">
+                Company No. 16482604
+              </p>
+            </div>
+          </div>
+
+          {/* Regulatory text */}
+          <div className="text-zinc-600 text-xs text-center md:text-left space-y-2">
+            <p>
+              Bank connections powered by TrueLayer, authorised and regulated by the Financial Conduct Authority (FCA).
             </p>
-            <p className="text-zinc-600 text-xs text-center md:text-right">
-              Not financial advice. Please consult a qualified accountant for complex tax matters.
+            <p>
+              TaxFolio is not a financial advisor or accountant. The information provided is for general guidance only
+              and should not be considered as professional tax, financial, or legal advice. Please consult a qualified
+              accountant or tax advisor for complex tax matters.
             </p>
           </div>
         </div>

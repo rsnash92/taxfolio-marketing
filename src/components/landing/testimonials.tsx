@@ -1,47 +1,74 @@
-import { Quote } from "lucide-react"
+import { Star } from "lucide-react"
 
 const testimonials = [
   {
-    quote: "I used to spend a whole weekend on my tax return. With TaxFolio, I review transactions for 10 minutes on my phone each week. Done.",
-    author: "Sarah K.",
+    quote: "Finally, tax software that doesn't make me want to cry. The AI categorisation is incredibly accurate.",
+    author: "Sarah T.",
     role: "Freelance Designer",
+    highlight: "Saved me hours every month",
   },
   {
-    quote: "Finally, something simpler than Xero that actually understands my transactions. The AI is scarily good at knowing what's business vs personal.",
-    author: "Marcus T.",
-    role: "IT Contractor",
-  },
-  {
-    quote: "The MTD quarterly view is brilliant. I can see exactly what I owe each quarter instead of panicking in January. Worth every penny.",
-    author: "Emma R.",
+    quote: "I was dreading MTD but TaxFolio made it completely painless. Set up in 10 minutes.",
+    author: "James M.",
     role: "Property Landlord",
+    highlight: "MTD ready in 10 minutes",
+  },
+  {
+    quote: "The quarterly view is brilliant. I can see exactly what I owe each quarter instead of panicking in January.",
+    author: "Priya K.",
+    role: "IT Contractor",
+    highlight: "No more January panic",
   },
 ]
 
 export function Testimonials() {
   return (
-    <section className="py-20 px-4 bg-zinc-900/50">
+    <section className="py-20 px-4">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Trusted by UK freelancers
-        </h2>
-        <p className="text-zinc-400 text-center mb-12 max-w-2xl mx-auto">
-          Join thousands who&apos;ve made self-assessment simple.
-        </p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Trusted by sole traders across the UK
+          </h2>
+          <div className="flex items-center justify-center gap-1 mb-2">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+            ))}
+          </div>
+          <p className="text-zinc-400">
+            Join thousands getting their tax sorted the smart way
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.author}
-              className="p-6 rounded-xl bg-zinc-900 border border-zinc-800"
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6"
             >
-              <Quote className="w-8 h-8 text-[#15e49e]/30 mb-4" />
-              <p className="text-zinc-300 mb-6 leading-relaxed">
-                &ldquo;{testimonial.quote}&rdquo;
+              {/* Stars */}
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+
+              {/* Quote */}
+              <p className="text-zinc-300 mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
+
+              {/* Highlight */}
+              <p className="text-sm text-[#15e49e] font-medium mb-4">
+                {testimonial.highlight}
               </p>
-              <div>
-                <p className="font-medium">{testimonial.author}</p>
-                <p className="text-zinc-500 text-sm">{testimonial.role}</p>
+
+              {/* Author */}
+              <div className="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                <div className="w-10 h-10 bg-zinc-700 rounded-full flex items-center justify-center text-white font-medium">
+                  {testimonial.author.charAt(0)}
+                </div>
+                <div>
+                  <p className="font-medium text-white text-sm">{testimonial.author}</p>
+                  <p className="text-xs text-zinc-500">{testimonial.role}</p>
+                </div>
               </div>
             </div>
           ))}

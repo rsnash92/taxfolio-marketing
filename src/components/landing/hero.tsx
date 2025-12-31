@@ -1,6 +1,6 @@
 "use client"
 
-import { CheckCircle2, Shield, Smartphone } from "lucide-react"
+import { CheckCircle2, Shield, Smartphone, Bot } from "lucide-react"
 
 export function Hero() {
   const scrollToFeatures = () => {
@@ -19,41 +19,74 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#15e49e] opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#15e49e]"></span>
           </span>
-          Ready for MTD 2026
+          Ready for Making Tax Digital 2026
         </div>
 
         {/* Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
           <span className="bg-gradient-to-r from-white via-white to-zinc-500 bg-clip-text text-transparent">
-            Self-assessment,
+            Your self-assessment,
           </span>
           <br />
           <span className="bg-gradient-to-r from-[#15e49e] to-[#12c98a] bg-clip-text text-transparent">
-            sorted by AI.
+            sorted.
           </span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10">
-          Connect your bank. AI categorises everything.
-          <br className="hidden md:block" />
-          See your tax position in 5 minutes.
+        <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-4">
+          From your phone or browser. No accountant needed.
         </p>
 
+        {/* Audience callout */}
+        <p className="text-lg text-zinc-300 mb-8">
+          <span className="text-white font-medium">Freelancer?</span>{' '}
+          <span className="text-white font-medium">Sole trader?</span>{' '}
+          <span className="text-white font-medium">Landlord?</span>{' '}
+          <span className="text-white font-medium">Side hustler?</span>
+          <br />
+          We&apos;ve got you covered.
+        </p>
+
+        {/* Trust points */}
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-zinc-400 mb-8">
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 className="h-4 w-4 text-[#15e49e]" />
+            HMRC MTD ready
+          </span>
+          <span className="flex items-center gap-1.5">
+            <Bot className="h-4 w-4 text-[#15e49e]" />
+            AI-powered categorisation
+          </span>
+          <span className="flex items-center gap-1.5">
+            <Shield className="h-4 w-4 text-[#15e49e]" />
+            Bank-level security
+          </span>
+          <span className="flex items-center gap-1.5">
+            <Smartphone className="h-4 w-4 text-[#15e49e]" />
+            UK-based support
+          </span>
+        </div>
+
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
           <a href="https://app.taxfolio.io/signup">
             <button className="btn-brand text-lg">
-              GET STARTED FREE
+              START FREE TRIAL
             </button>
           </a>
           <button
             className="btn-brand-outline text-lg"
             onClick={scrollToFeatures}
           >
-            SEE HOW IT WORKS
+            VIEW PRICING
           </button>
         </div>
+
+        {/* No credit card */}
+        <p className="text-sm text-zinc-500 mb-16">
+          No credit card required
+        </p>
 
         {/* App Screenshot Placeholder */}
         <div className="relative max-w-4xl mx-auto mb-16">
@@ -107,21 +140,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Trust Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-zinc-500 text-sm">
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#15e49e]" />
-            <span>Ready for MTD 2026</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Shield className="w-4 h-4 text-[#15e49e]" />
-            <span>Bank-level security</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Smartphone className="w-4 h-4 text-[#15e49e]" />
-            <span>Works on any device</span>
-          </div>
-        </div>
       </div>
     </section>
   )
