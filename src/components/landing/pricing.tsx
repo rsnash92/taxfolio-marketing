@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils"
 const plans = [
   {
     name: "Lite",
-    price: "£49.99",
+    price: "£69.99",
     period: "/year",
     description: "Perfect for simple freelancers",
     features: [
@@ -14,7 +14,7 @@ const plans = [
       { text: "Full SA103 breakdown", included: true },
       { text: "SA105 (Landlords)", included: false },
       { text: "MTD quarterly breakdown", included: false },
-      { text: "CSV/PDF export", included: false },
+      { text: "Direct HMRC submission", included: false },
     ],
     cta: "Start Free Trial",
     ctaVariant: "outline" as const,
@@ -22,7 +22,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "£89.99",
+    price: "£129.99",
     period: "/year",
     description: "For landlords & serious freelancers",
     features: [
@@ -31,8 +31,8 @@ const plans = [
       { text: "AI categorisation", included: true },
       { text: "Full SA103 & SA105", included: true },
       { text: "MTD quarterly breakdown", included: true },
-      { text: "CSV & PDF export", included: true },
-      { text: "Priority support", included: true },
+      { text: "Direct HMRC submission", included: true },
+      { text: "Mileage tracker", included: true },
     ],
     cta: "Start Free Trial",
     ctaVariant: "default" as const,

@@ -1,4 +1,4 @@
-import { Bot, Building2, Smartphone, Calculator, CalendarDays, FileDown } from "lucide-react"
+import { Bot, Building2, Smartphone, Calculator, Send, Car } from "lucide-react"
 
 const features = [
   {
@@ -22,14 +22,14 @@ const features = [
     description: "See your estimated tax bill update live as you confirm transactions. No January surprises.",
   },
   {
-    icon: CalendarDays,
-    title: "MTD Ready",
-    description: "Quarterly breakdowns built-in. Ready for Making Tax Digital when it becomes mandatory in 2026.",
+    icon: Send,
+    title: "Direct HMRC Submission",
+    description: "Submit quarterly updates directly to HMRC. No spreadsheets, no third-party software. One click.",
   },
   {
-    icon: FileDown,
-    title: "Easy Export",
-    description: "Download CSV or SA103 summary for your accountant. One click and you're done.",
+    icon: Car,
+    title: "Mileage Tracker",
+    description: "Log business miles and calculate your allowance automatically. Supports both HMRC rates.",
   },
 ]
 

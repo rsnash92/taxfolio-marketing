@@ -19,14 +19,15 @@ const PLANS = {
   lite: {
     features: [
       "Everything in Free Trial",
-      "3 bank connections",
-      "500 transactions/month",
+      "1 bank connection",
+      "100 transactions/month",
       "SA103 summary",
-      "CSV export",
+      "Basic tax summary",
     ],
     notIncluded: [
       "Property income (SA105)",
-      "Priority support",
+      "MTD quarterly breakdown",
+      "Direct HMRC submission",
     ],
   },
   pro: {
@@ -35,7 +36,9 @@ const PLANS = {
       "Unlimited transactions",
       "SA103 & SA105 summaries",
       "Home office calculator",
-      "MTD-ready reports",
+      "MTD quarterly breakdown",
+      "Direct HMRC submission",
+      "Mileage tracker",
       "PDF exports",
       "Priority support",
     ],
@@ -144,7 +147,7 @@ export default function PricingPage() {
           <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-8">
             <h3 className="text-xl font-semibold text-white">Lite</h3>
             <div className="mt-4">
-              <span className="text-4xl font-bold text-white">£49.99</span>
+              <span className="text-4xl font-bold text-white">£69.99</span>
               <span className="text-zinc-400">/year</span>
             </div>
             <p className="text-zinc-400 text-sm mt-2">Perfect for simple freelancers</p>
@@ -180,7 +183,7 @@ export default function PricingPage() {
             </div>
             <h3 className="text-xl font-semibold text-white">Pro</h3>
             <div className="mt-4">
-              <span className="text-4xl font-bold text-white">£89.99</span>
+              <span className="text-4xl font-bold text-white">£129.99</span>
               <span className="text-zinc-400">/year</span>
             </div>
             <p className="text-zinc-400 text-sm mt-2">For landlords & serious freelancers</p>

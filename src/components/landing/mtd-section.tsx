@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, AlertTriangle } from "lucide-react"
 
@@ -32,19 +31,19 @@ export function MTDSection() {
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#15e49e] flex-shrink-0" />
-                <span className="text-zinc-300">Quarterly summaries with deadlines</span>
+                <span className="text-zinc-300">Quarterly updates with deadline tracking</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#15e49e] flex-shrink-0" />
-                <span className="text-zinc-300">Export formats HMRC accepts</span>
+                <span className="text-zinc-300">Submit directly to HMRC from TaxFolio</span>
               </div>
             </div>
 
-            <Link href="/signup">
+            <a href="https://app.taxfolio.io/signup">
               <Button className="rounded-full bg-amber-500 hover:bg-amber-400 text-zinc-900 font-semibold">
                 Get MTD Ready Now
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
