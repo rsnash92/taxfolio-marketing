@@ -23,7 +23,8 @@ export function HeroLight() {
             <br />
             <span className="bg-gradient-to-r from-emerald-500 to-emerald-600 bg-clip-text text-transparent">
               in 15 minutes
-            </span>
+            </span>{" "}
+            <span className="inline-block">✨</span>
           </h1>
 
           {/* Subheadline */}
@@ -145,7 +146,7 @@ export function HeroLight() {
 
           {/* Center Phone */}
           <div className="drop-shadow-2xl">
-            <div className="w-72 bg-gray-900 rounded-[3rem] p-3">
+            <div className="w-80 bg-gray-900 rounded-[3rem] p-3">
               <div className="bg-white rounded-[2.5rem] overflow-hidden">
                 {/* Status bar */}
                 <div className="flex justify-between items-center px-6 py-2 text-xs text-gray-500">
@@ -156,24 +157,24 @@ export function HeroLight() {
                 </div>
 
                 {/* App content */}
-                <div className="px-4 pb-6">
+                <div className="px-5 pb-6">
                   <div className="text-center mb-4">
                     <p className="text-xs text-gray-500">Tax Year 2025-26</p>
                   </div>
 
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-2 mb-4">
-                    <div className="bg-gray-50 rounded-xl p-3 text-center">
-                      <p className="text-xs text-gray-500">Income</p>
-                      <p className="text-lg font-bold text-emerald-500">£52,340</p>
+                    <div className="bg-gray-50 rounded-xl p-2 text-center">
+                      <p className="text-[10px] text-gray-500">Income</p>
+                      <p className="text-base font-bold text-emerald-500">£52,340</p>
                     </div>
-                    <div className="bg-gray-50 rounded-xl p-3 text-center">
-                      <p className="text-xs text-gray-500">Expenses</p>
-                      <p className="text-lg font-bold text-red-500">£12,847</p>
+                    <div className="bg-gray-50 rounded-xl p-2 text-center">
+                      <p className="text-[10px] text-gray-500">Expenses</p>
+                      <p className="text-base font-bold text-red-500">£12,847</p>
                     </div>
-                    <div className="bg-gray-50 rounded-xl p-3 text-center">
-                      <p className="text-xs text-gray-500">Tax Due</p>
-                      <p className="text-lg font-bold text-gray-900">£6,247</p>
+                    <div className="bg-gray-50 rounded-xl p-2 text-center">
+                      <p className="text-[10px] text-gray-500">Tax Due</p>
+                      <p className="text-base font-bold text-gray-900">£6,247</p>
                     </div>
                   </div>
 
