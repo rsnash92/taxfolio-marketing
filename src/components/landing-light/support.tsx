@@ -15,12 +15,16 @@ export function SupportSection() {
 
             <div className="flex items-center gap-4">
               <div className="flex -space-x-2">
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-emerald-200 flex items-center justify-center text-sm font-medium text-emerald-700">
-                  L
-                </div>
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-blue-200 flex items-center justify-center text-sm font-medium text-blue-700">
-                  T
-                </div>
+                <img
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=40&h=40&fit=crop&crop=face"
+                  alt="Support team member"
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=40&h=40&fit=crop&crop=face"
+                  alt="Support team member"
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                />
               </div>
               <div>
                 <p className="font-semibold text-gray-900">UK-based tax experts</p>
@@ -56,12 +60,14 @@ export function SupportSection() {
               </div>
             </div>
 
-            {/* Person placeholder */}
-            <div className="hidden lg:block w-48 h-64 bg-gradient-to-b from-emerald-100 to-emerald-200 rounded-2xl shadow-lg flex items-center justify-center">
-              <div className="text-center p-4">
-                <div className="w-20 h-20 bg-emerald-300 rounded-full mx-auto mb-3 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-emerald-700">S</span>
-                </div>
+            {/* Support team member */}
+            <div className="hidden lg:block w-48 h-64 bg-gradient-to-b from-emerald-100 to-emerald-200 rounded-2xl shadow-lg overflow-hidden">
+              <div className="text-center p-4 h-full flex flex-col items-center justify-center">
+                <img
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=160&h=160&fit=crop&crop=face"
+                  alt="Sarah - Tax Support"
+                  className="w-20 h-20 rounded-full mx-auto mb-3 object-cover border-4 border-white shadow"
+                />
                 <p className="text-sm font-medium text-emerald-800">Sarah</p>
                 <p className="text-xs text-emerald-600">Tax Support</p>
               </div>

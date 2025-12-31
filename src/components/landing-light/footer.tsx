@@ -4,17 +4,20 @@ import { TrendingUp } from "lucide-react"
 const footerLinks = {
   product: [
     { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "MTD Guide", href: "#" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Login", href: "https://app.taxfolio.io/login" },
+    { label: "Sign Up", href: "https://app.taxfolio.io/signup" },
   ],
   resources: [
-    { label: "Blog", href: "#" },
     { label: "Help Centre", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "MTD Guide", href: "#" },
+    { label: "Affiliates", href: "/affiliates" },
+    { label: "For Accountants", href: "/accountants" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
+    { label: "Cookie Policy", href: "/cookies" },
     { label: "Disclaimer", href: "/disclaimer" },
   ],
 }
@@ -74,13 +77,31 @@ export function FooterLight() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-400">
-            © 2025 TAXFOLIO LTD (Company No. 16482604). Bank connections by TrueLayer (FCA authorised).
-          </p>
-          <div className="flex items-center gap-4">
-            <span className="text-xs bg-gray-800 px-3 py-1 rounded-full">HMRC MTD Ready</span>
-            <span className="text-xs bg-gray-800 px-3 py-1 rounded-full">256-bit SSL</span>
+        <div className="border-t border-gray-800 pt-8 space-y-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="text-center md:text-left">
+              <p className="text-gray-400 text-sm">
+                © 2025 TAXFOLIO LTD. Made in the UK
+              </p>
+              <p className="text-gray-500 text-xs mt-1">
+                Company No. 16482604
+              </p>
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="text-xs bg-gray-800 px-3 py-1 rounded-full">HMRC MTD Ready</span>
+              <span className="text-xs bg-gray-800 px-3 py-1 rounded-full">256-bit SSL</span>
+            </div>
+          </div>
+
+          <div className="text-gray-500 text-xs text-center md:text-left space-y-2">
+            <p>
+              Bank connections powered by TrueLayer, authorised and regulated by the Financial Conduct Authority (FCA).
+            </p>
+            <p>
+              TaxFolio is not a financial advisor or accountant. The information provided is for general guidance only
+              and should not be considered as professional tax, financial, or legal advice. Please consult a qualified
+              accountant or tax advisor for complex tax matters.
+            </p>
           </div>
         </div>
       </div>

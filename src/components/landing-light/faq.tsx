@@ -20,9 +20,29 @@ const faqs = [
       "Yes. We use bank-level 256-bit encryption for all data. Bank connections are provided through TrueLayer, which is authorised and regulated by the Financial Conduct Authority (FCA). We never store your bank login credentials.",
   },
   {
+    question: "Can I connect my bank account?",
+    answer:
+      "Yes! TaxFolio connects to most major UK banks through Open Banking. This allows us to automatically import your transactions, saving you hours of manual data entry. You can also upload CSV files or add transactions manually.",
+  },
+  {
+    question: "What if I have property income?",
+    answer:
+      "TaxFolio Pro supports property income (SA105). You can track rental income and expenses for multiple properties, calculate allowable deductions, and submit to HMRC. We support the cash basis for properties.",
+  },
+  {
+    question: "How does the AI categorisation work?",
+    answer:
+      "Our AI analyses your transaction descriptions and automatically suggests the correct tax category. It learns from common patterns and gets smarter over time. You can always review and adjust categories before submitting.",
+  },
+  {
     question: "Can I try before I buy?",
     answer:
       "Absolutely! We offer a free trial with no credit card required. You can test all features and even do a test submission to HMRC's sandbox. You'll only need to pay when you're ready to submit your actual tax return.",
+  },
+  {
+    question: "What happens if I need help?",
+    answer:
+      "We offer email support for all users, with priority support for Pro subscribers. We also have a built-in AI assistant called 'Ask TaxFolio' that can answer common tax questions instantly.",
   },
 ]
 
