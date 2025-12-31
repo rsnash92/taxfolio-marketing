@@ -1,9 +1,18 @@
 "use client"
 
+import { useState } from "react"
 import { Star, Crown } from "lucide-react"
-import Image from "next/image"
 
 export function HeroLight() {
+  const [email, setEmail] = useState("")
+
+  const handleSignup = () => {
+    const signupUrl = email
+      ? `https://app.taxfolio.io/signup?email=${encodeURIComponent(email)}`
+      : "https://app.taxfolio.io/signup"
+    window.location.href = signupUrl
+  }
+
   return (
     <section className="bg-gradient-to-b from-emerald-50 to-white pt-32 pb-20 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
@@ -64,13 +73,17 @@ export function HeroLight() {
             <input
               type="email"
               placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSignup()}
               className="px-5 py-3 border border-gray-300 rounded-full w-full sm:w-72 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
             />
-            <a href="https://app.taxfolio.io/signup">
-              <button className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 rounded-full font-semibold transition-colors">
-                Start for Free
-              </button>
-            </a>
+            <button
+              onClick={handleSignup}
+              className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 rounded-full font-semibold transition-colors"
+            >
+              Start for Free
+            </button>
           </div>
 
           {/* Social Login */}
@@ -118,7 +131,7 @@ export function HeroLight() {
               </div>
             </div>
             <span className="text-gray-600">
-              Trusted by <strong className="text-emerald-600">5,000+</strong> sole traders across UK
+              Join the beta <strong className="text-emerald-600">•</strong> Be among the first
             </span>
           </div>
         </div>
