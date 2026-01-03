@@ -175,7 +175,26 @@ export default function AlternateHomePage() {
 
                   {/* App content */}
                   <div className="px-5 pb-6">
-                    <div className="text-center mb-4">
+                    {/* AI Processing Banner */}
+                    <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-xl p-3 mb-4 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiLz48L3N2Zz4=')] opacity-50"></div>
+                      <div className="relative flex items-center gap-3">
+                        <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                          <Sparkles className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-white font-semibold text-sm">AI Categorising</p>
+                          <p className="text-white/70 text-xs">247 transactions processed</p>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
+                          <div className="w-1.5 h-1.5 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-1.5 h-1.5 bg-white/30 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="text-center mb-3">
                       <p className="text-xs text-gray-500">Tax Year 2025-26</p>
                     </div>
 
@@ -198,10 +217,7 @@ export default function AlternateHomePage() {
                     {/* Transactions */}
                     <div className="flex items-center justify-between mb-2">
                       <p className="text-sm font-semibold text-gray-700">Recent Transactions</p>
-                      <div className="flex items-center gap-1 px-2 py-0.5 bg-gradient-to-r from-violet-500/10 to-[#00e3ec]/10 rounded-full">
-                        <Sparkles className="w-3 h-3 text-violet-500" />
-                        <span className="text-[10px] font-medium text-violet-600">AI Sorted</span>
-                      </div>
+                      <span className="text-xs text-[#00e3ec]">See all</span>
                     </div>
                     <div className="space-y-2">
                       <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
@@ -212,8 +228,8 @@ export default function AlternateHomePage() {
                           <div>
                             <p className="text-sm font-medium">Amazon</p>
                             <p className="text-xs text-gray-500 flex items-center gap-1">
-                              <Cpu className="w-2.5 h-2.5 text-violet-400" />
-                              Office Supplies
+                              <Sparkles className="w-2.5 h-2.5 text-violet-500" />
+                              <span className="text-violet-600">Office Supplies</span>
                             </p>
                           </div>
                         </div>
@@ -226,14 +242,14 @@ export default function AlternateHomePage() {
                       </div>
                       <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                            <span className="text-red-500 text-xs font-bold">G</span>
+                          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span className="text-blue-500 text-xs font-bold">G</span>
                           </div>
                           <div>
                             <p className="text-sm font-medium">Google Ads</p>
                             <p className="text-xs text-gray-500 flex items-center gap-1">
-                              <Cpu className="w-2.5 h-2.5 text-violet-400" />
-                              Marketing
+                              <Sparkles className="w-2.5 h-2.5 text-violet-500" />
+                              <span className="text-violet-600">Marketing</span>
                             </p>
                           </div>
                         </div>
@@ -244,19 +260,23 @@ export default function AlternateHomePage() {
                           </span>
                         </div>
                       </div>
-                      <div className="flex items-center justify-between p-3 bg-amber-50 rounded-xl border border-amber-200">
+                      <div className="flex items-center justify-between p-3 bg-violet-50 rounded-xl border border-violet-200">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center">
-                            <span className="text-amber-500 text-xs font-bold">?</span>
+                          <div className="w-8 h-8 bg-violet-100 rounded-full flex items-center justify-center">
+                            <Sparkles className="w-4 h-4 text-violet-500" />
                           </div>
                           <div>
-                            <p className="text-sm font-medium">Costa Coffee</p>
-                            <p className="text-xs text-amber-600">Needs Review</p>
+                            <p className="text-sm font-medium text-violet-700">Costa Coffee</p>
+                            <p className="text-xs text-violet-500">AI suggests: Personal</p>
                           </div>
                         </div>
-                        <div className="text-right">
-                          <p className="text-sm font-semibold">£4.50</p>
-                          <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">Review</span>
+                        <div className="flex gap-1">
+                          <button className="w-7 h-7 bg-white rounded-lg flex items-center justify-center border border-gray-200">
+                            <Check className="w-4 h-4 text-green-500" />
+                          </button>
+                          <button className="w-7 h-7 bg-white rounded-lg flex items-center justify-center border border-gray-200">
+                            <X className="w-4 h-4 text-gray-400" />
+                          </button>
                         </div>
                       </div>
                     </div>
