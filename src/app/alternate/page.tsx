@@ -145,7 +145,7 @@ export default function AlternateHomePage() {
           <div className="relative flex justify-center items-center mt-8 lg:mt-0">
             {/* Floating elements around phone - only visible on xl screens */}
             {/* Bank Connected badge - LEFT TOP */}
-            <div className="absolute -left-20 top-1/4 hidden xl:block" style={{ animation: 'float 3s ease-in-out infinite' }}>
+            <div className="absolute -left-8 top-1/4 hidden xl:block" style={{ animation: 'float 3s ease-in-out infinite' }}>
               <div className="bg-white rounded-2xl shadow-xl p-3 border border-gray-100">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-[#00e3ec]/10 rounded-full flex items-center justify-center">
@@ -160,7 +160,7 @@ export default function AlternateHomePage() {
             </div>
 
             {/* Saved badge - RIGHT TOP */}
-            <div className="absolute -right-20 top-1/3 hidden xl:block" style={{ animation: 'float 2.5s ease-in-out infinite 0.5s' }}>
+            <div className="absolute -right-8 top-1/3 hidden xl:block" style={{ animation: 'float 2.5s ease-in-out infinite 0.5s' }}>
               <div className="bg-white rounded-2xl shadow-xl p-3 border border-gray-100">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
@@ -175,7 +175,7 @@ export default function AlternateHomePage() {
             </div>
 
             {/* MTD Ready badge - LEFT BOTTOM */}
-            <div className="absolute -left-20 bottom-1/4 hidden xl:block" style={{ animation: 'float 3.5s ease-in-out infinite 1s' }}>
+            <div className="absolute -left-8 bottom-1/4 hidden xl:block" style={{ animation: 'float 3.5s ease-in-out infinite 1s' }}>
               <div className="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-2xl shadow-xl p-3">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-[#00e3ec]/20 rounded-full flex items-center justify-center">
@@ -191,7 +191,7 @@ export default function AlternateHomePage() {
 
             {/* Center Phone - Static */}
             <div className="drop-shadow-2xl relative">
-              <div className="w-[290px] md:w-[310px] lg:w-[340px] bg-gray-900 rounded-[2.5rem] p-2.5 relative">
+              <div className="w-[290px] md:w-[310px] lg:w-[300px] bg-gray-900 rounded-[2.5rem] p-2.5 relative">
                 {/* Phone notch */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-gray-900 rounded-b-xl z-10" />
 
