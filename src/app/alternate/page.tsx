@@ -22,7 +22,7 @@ import {
   Check,
   ChevronDown,
   Star,
-  Sparkles
+  Brain
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -65,13 +65,14 @@ export default function AlternateHomePage() {
             <div className="flex items-center gap-3">
               <Link
                 href="/login"
-                className="px-5 py-2 text-gray-700 font-medium text-sm rounded-full border border-gray-200 hover:border-gray-300 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2 text-gray-700 font-medium text-sm rounded-full border border-gray-200 hover:border-gray-300 transition-colors bg-white"
               >
-                Log in
+                <Lock className="w-3.5 h-3.5" />
+                LOGIN
               </Link>
               <Link
                 href="/signup"
-                className="px-5 py-2 bg-gray-900 text-white font-medium text-sm rounded-full hover:bg-gray-800 transition-colors"
+                className="px-5 py-2 bg-gradient-to-r from-[#0f172a] to-[#1e293b] text-white font-medium text-sm rounded-full hover:from-[#1e293b] hover:to-[#334155] transition-all"
               >
                 Get Started
               </Link>
@@ -106,10 +107,12 @@ export default function AlternateHomePage() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/signup"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-colors"
+                className="inline-flex items-center gap-3 pl-2 pr-6 py-2 bg-gradient-to-r from-[#0f172a] to-[#1e293b] text-white rounded-full font-medium hover:from-[#1e293b] hover:to-[#334155] transition-all shadow-lg"
               >
+                <span className="w-10 h-10 rounded-full bg-[#00e3ec] flex items-center justify-center">
+                  <ArrowRight className="w-5 h-5 text-[#0f172a] stroke-[3]" />
+                </span>
                 Get Started for Free
-                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="#features"
@@ -138,169 +141,207 @@ export default function AlternateHomePage() {
             </div>
           </div>
 
-          {/* Right Content - Phone Mockup with Side Illustrations */}
-          <div className="relative flex justify-center items-center gap-6">
-            {/* Left illustration */}
-            <div className="hidden lg:flex items-center gap-4">
-              <div className="text-center">
-                <div className="w-28 h-28 bg-[#00e3ec]/10 rounded-2xl flex flex-col items-center justify-center mb-3">
-                  <svg className="w-9 h-9 text-[#00e3ec] mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow">
-                    <svg className="w-4 h-4 text-[#00e3ec]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+          {/* Right Content - Phone Mockup */}
+          <div className="relative flex justify-center items-center mt-8 lg:mt-0">
+            {/* Floating elements around phone - only visible on xl screens */}
+            {/* Bank Connected badge - LEFT TOP */}
+            <div className="absolute -left-20 top-1/4 hidden xl:block" style={{ animation: 'float 3s ease-in-out infinite' }}>
+              <div className="bg-white rounded-2xl shadow-xl p-3 border border-gray-100">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-[#00e3ec]/10 rounded-full flex items-center justify-center">
+                    <Landmark className="w-4 h-4 text-[#00e3ec]" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-gray-900">Bank Connected</p>
+                    <p className="text-[10px] text-gray-500">Securely linked</p>
                   </div>
                 </div>
-                <p className="text-gray-600 font-medium text-sm">
-                  Securely connect your
-                  <br />
-                  bank accounts.
-                </p>
               </div>
             </div>
 
-            {/* Center Phone */}
-            <div className="drop-shadow-2xl">
-              <div className="w-72 lg:w-80 bg-gray-900 rounded-[3rem] p-3">
-                <div className="bg-white rounded-[2.5rem] overflow-hidden">
+            {/* Saved badge - RIGHT TOP */}
+            <div className="absolute -right-20 top-1/3 hidden xl:block" style={{ animation: 'float 2.5s ease-in-out infinite 0.5s' }}>
+              <div className="bg-white rounded-2xl shadow-xl p-3 border border-gray-100">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <Check className="w-4 h-4 text-green-500" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-gray-900">£2,340 saved</p>
+                    <p className="text-[10px] text-gray-500">In deductions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* MTD Ready badge - LEFT BOTTOM */}
+            <div className="absolute -left-20 bottom-1/4 hidden xl:block" style={{ animation: 'float 3.5s ease-in-out infinite 1s' }}>
+              <div className="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-2xl shadow-xl p-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-[#00e3ec]/20 rounded-full flex items-center justify-center">
+                    <Building2 className="w-4 h-4 text-[#00e3ec]" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-white">MTD Ready</p>
+                    <p className="text-[10px] text-gray-400">HMRC compliant</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Center Phone - Static */}
+            <div className="drop-shadow-2xl relative">
+              <div className="w-[290px] md:w-[310px] lg:w-[340px] bg-gray-900 rounded-[2.5rem] p-2.5 relative">
+                {/* Phone notch */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-gray-900 rounded-b-xl z-10" />
+
+                <div className="bg-white rounded-[2rem] overflow-hidden">
                   {/* Status bar */}
-                  <div className="flex justify-between items-center px-6 py-2 text-xs text-gray-500">
-                    <span>09:41</span>
+                  <div className="flex justify-between items-center px-6 py-2 text-[10px] text-gray-500">
+                    <span className="font-medium">09:41</span>
                     <div className="flex items-center gap-1">
+                      <div className="flex gap-0.5">
+                        <div className="w-0.5 h-2 bg-gray-400 rounded-sm"></div>
+                        <div className="w-0.5 h-2 bg-gray-400 rounded-sm"></div>
+                        <div className="w-0.5 h-2 bg-gray-300 rounded-sm"></div>
+                      </div>
                       <div className="w-4 h-2 bg-gray-400 rounded-sm"></div>
                     </div>
                   </div>
 
                   {/* App content */}
-                  <div className="px-5 pb-6">
-                    {/* AI Processing Banner */}
+                  <div className="px-4 pb-5">
+                    {/* AI Processing Banner with shimmer */}
                     <div className="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-3 mb-4 relative overflow-hidden">
+                      {/* Shimmer effect */}
+                      <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent" style={{ animation: 'shimmer 2s infinite' }} />
                       <div className="relative flex items-center gap-3">
                         <div className="flex items-center gap-1.5">
                           <div className="w-2 h-2 bg-[#00e3ec] rounded-full animate-pulse" />
-                          <Sparkles className="w-4 h-4 text-[#00e3ec]" />
+                          <Brain className="w-4 h-4 text-[#00e3ec] animate-pulse" />
                         </div>
                         <div className="flex-1">
                           <p className="text-white font-semibold text-sm">AI Categorising</p>
-                          <p className="text-gray-400 text-xs">247 transactions processed</p>
+                          <p className="text-gray-400 text-xs">247 transactions</p>
                         </div>
                         <div className="flex items-center gap-1">
-                          <div className="w-1.5 h-1.5 bg-[#00e3ec] rounded-full animate-pulse"></div>
-                          <div className="w-1.5 h-1.5 bg-[#00e3ec]/60 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                          <div className="w-1.5 h-1.5 bg-[#00e3ec]/30 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                          <div className="w-2 h-2 bg-[#00e3ec] rounded-full animate-pulse"></div>
+                          <div className="w-2 h-2 bg-[#00e3ec]/60 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-2 h-2 bg-[#00e3ec]/30 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
                         </div>
                       </div>
-                    </div>
-
-                    <div className="text-center mb-3">
-                      <p className="text-xs text-gray-500">Tax Year 2025-26</p>
                     </div>
 
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-2 mb-4">
                       <div className="bg-gray-50 rounded-xl p-2 text-center">
                         <p className="text-[10px] text-gray-500">Income</p>
-                        <p className="text-base font-bold text-[#00e3ec]">£52,340</p>
+                        <p className="text-base font-bold text-[#00e3ec]">£52k</p>
                       </div>
                       <div className="bg-gray-50 rounded-xl p-2 text-center">
                         <p className="text-[10px] text-gray-500">Expenses</p>
-                        <p className="text-base font-bold text-red-500">£12,847</p>
+                        <p className="text-base font-bold text-red-500">£12k</p>
                       </div>
                       <div className="bg-gray-50 rounded-xl p-2 text-center">
                         <p className="text-[10px] text-gray-500">Tax Due</p>
-                        <p className="text-base font-bold text-gray-900">£6,247</p>
+                        <p className="text-base font-bold text-gray-900">£6k</p>
                       </div>
                     </div>
 
                     {/* Transactions */}
                     <div className="flex items-center justify-between mb-2">
-                      <p className="text-sm font-semibold text-gray-700">Recent Transactions</p>
-                      <span className="text-xs text-[#00e3ec]">See all</span>
+                      <p className="font-semibold text-gray-900 text-sm">Recent</p>
+                      <span className="text-xs text-[#00e3ec] font-medium">See all</span>
                     </div>
                     <div className="space-y-2">
+                      {/* Transaction 1 */}
                       <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
-                            <span className="text-orange-500 text-xs font-bold">A</span>
+                          <div className="w-9 h-9 bg-orange-100 rounded-lg flex items-center justify-center">
+                            <span className="text-orange-500 text-sm font-bold">A</span>
                           </div>
                           <div>
-                            <p className="text-sm font-medium">Amazon</p>
+                            <p className="font-medium text-gray-900 text-sm">Amazon</p>
                             <p className="text-xs text-gray-500 flex items-center gap-1">
-                              <Sparkles className="w-2.5 h-2.5 text-violet-500" />
-                              <span className="text-violet-600">Office Supplies</span>
+                              <Brain className="w-2.5 h-2.5 text-violet-500" />
+                              <span className="text-violet-600">Office</span>
                             </p>
                           </div>
                         </div>
-                        <div className="text-right">
-                          <p className="text-sm font-semibold">£47.99</p>
-                          <span className="text-xs bg-[#00e3ec]/10 text-[#00b8bf] px-2 py-0.5 rounded-full">
-                            Allowable
-                          </span>
-                        </div>
+                        <p className="font-semibold text-gray-900 text-sm">£47.99</p>
                       </div>
+
+                      {/* Transaction 2 */}
                       <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                            <span className="text-blue-500 text-xs font-bold">G</span>
+                          <div className="w-9 h-9 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <span className="text-blue-500 text-sm font-bold">G</span>
                           </div>
                           <div>
-                            <p className="text-sm font-medium">Google Ads</p>
+                            <p className="font-medium text-gray-900 text-sm">Google Ads</p>
                             <p className="text-xs text-gray-500 flex items-center gap-1">
-                              <Sparkles className="w-2.5 h-2.5 text-violet-500" />
+                              <Brain className="w-2.5 h-2.5 text-violet-500" />
                               <span className="text-violet-600">Marketing</span>
                             </p>
                           </div>
                         </div>
-                        <div className="text-right">
-                          <p className="text-sm font-semibold">£120.00</p>
-                          <span className="text-xs bg-[#00e3ec]/10 text-[#00b8bf] px-2 py-0.5 rounded-full">
-                            Allowable
-                          </span>
-                        </div>
+                        <p className="font-semibold text-gray-900 text-sm">£120.00</p>
                       </div>
-                      <div className="flex items-center justify-between p-3 bg-violet-50 rounded-xl border border-violet-200">
+
+                      {/* Transaction 3 - Expense */}
+                      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-violet-100 rounded-full flex items-center justify-center">
-                            <Sparkles className="w-4 h-4 text-violet-500" />
+                          <div className="w-9 h-9 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <span className="text-purple-500 text-sm font-bold">Z</span>
                           </div>
                           <div>
-                            <p className="text-sm font-medium text-violet-700">Costa Coffee</p>
-                            <p className="text-xs text-violet-500">AI suggests: Personal</p>
+                            <p className="font-medium text-gray-900 text-sm">Zoom</p>
+                            <p className="text-xs text-gray-500 flex items-center gap-1">
+                              <Brain className="w-2.5 h-2.5 text-violet-500" />
+                              <span className="text-violet-600">Software</span>
+                            </p>
                           </div>
                         </div>
-                        <div className="flex gap-1">
-                          <button className="w-7 h-7 bg-white rounded-lg flex items-center justify-center border border-gray-200">
-                            <Check className="w-4 h-4 text-green-500" />
+                        <p className="font-semibold text-gray-900 text-sm">£14.99</p>
+                      </div>
+
+                      {/* Transaction 4 - AI suggestion */}
+                      <div className="flex items-center justify-between p-3 bg-violet-50 rounded-xl border border-violet-200">
+                        <div className="flex items-center gap-3">
+                          <div className="w-9 h-9 bg-violet-100 rounded-lg flex items-center justify-center">
+                            <Brain className="w-4 h-4 text-violet-500 animate-pulse" />
+                          </div>
+                          <div>
+                            <p className="font-medium text-violet-700 text-sm">Costa</p>
+                            <p className="text-xs text-violet-500">Personal?</p>
+                          </div>
+                        </div>
+                        <div className="flex gap-1.5">
+                          <button className="w-7 h-7 bg-white rounded-lg flex items-center justify-center border border-green-200">
+                            <Check className="w-3.5 h-3.5 text-green-500" />
                           </button>
                           <button className="w-7 h-7 bg-white rounded-lg flex items-center justify-center border border-gray-200">
-                            <X className="w-4 h-4 text-gray-400" />
+                            <X className="w-3.5 h-3.5 text-gray-400" />
                           </button>
                         </div>
+                      </div>
+
+                      {/* Transaction 5 - Income */}
+                      <div className="flex items-center justify-between p-3 bg-green-50 rounded-xl border border-green-200">
+                        <div className="flex items-center gap-3">
+                          <div className="w-9 h-9 bg-green-100 rounded-lg flex items-center justify-center">
+                            <span className="text-green-600 text-sm font-bold">£</span>
+                          </div>
+                          <div>
+                            <p className="font-medium text-gray-900 text-sm">Client Pay</p>
+                            <p className="text-xs text-green-600">Income</p>
+                          </div>
+                        </div>
+                        <p className="font-semibold text-green-600 text-sm">+£2,500</p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Right illustration */}
-            <div className="hidden lg:flex items-center gap-4">
-              <div className="text-center">
-                <div className="w-28 h-28 bg-amber-100 rounded-2xl flex flex-col items-center justify-center mb-3">
-                  <svg className="w-9 h-9 text-amber-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                  <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <p className="text-gray-600 font-medium text-sm">
-                  Pay less tax. Get more
-                  <br />
-                  back from HMRC.
-                </p>
               </div>
             </div>
           </div>
