@@ -137,162 +137,138 @@ export default function AlternateHomePage() {
             </div>
           </div>
 
-          {/* Right Content - Phone Mockup with Hand */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-[320px] lg:w-[420px]">
-              {/* Phone Frame with App Screen */}
-              <div className="relative z-10 bg-gray-900 rounded-[3rem] p-2 shadow-2xl mx-auto w-[240px] lg:w-[280px]">
-                {/* Phone notch */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-gray-900 rounded-b-2xl z-20" />
+          {/* Right Content - Phone Mockup with Side Illustrations */}
+          <div className="relative flex justify-center items-center gap-6">
+            {/* Left illustration */}
+            <div className="hidden lg:flex items-center gap-4">
+              <div className="text-center">
+                <div className="w-28 h-28 bg-[#00e3ec]/10 rounded-2xl flex flex-col items-center justify-center mb-3">
+                  <svg className="w-9 h-9 text-[#00e3ec] mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow">
+                    <svg className="w-4 h-4 text-[#00e3ec]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                </div>
+                <p className="text-gray-600 font-medium text-sm">
+                  Securely connect your
+                  <br />
+                  bank accounts.
+                </p>
+              </div>
+            </div>
 
-                {/* Phone Screen */}
-                <div className="bg-white rounded-[2.5rem] overflow-hidden relative">
-                  {/* TaxFolio App Screen */}
-                  <div className="w-full min-h-[480px] lg:min-h-[560px] flex flex-col">
-                    {/* Status Bar */}
-                    <div className="flex items-center justify-between px-6 pt-3 pb-1">
-                      <span className="text-xs font-medium text-gray-900">9:41</span>
-                      <div className="flex items-center gap-1">
-                        <div className="flex items-end gap-0.5 h-3">
-                          <div className="w-0.5 h-1 bg-gray-900 rounded-full" />
-                          <div className="w-0.5 h-1.5 bg-gray-900 rounded-full" />
-                          <div className="w-0.5 h-2 bg-gray-900 rounded-full" />
-                          <div className="w-0.5 h-2.5 bg-gray-300 rounded-full" />
-                        </div>
-                        <div className="w-5 h-2.5 border border-gray-900 rounded-sm relative ml-1">
-                          <div className="absolute inset-0.5 bg-gray-900 rounded-sm" style={{ width: '60%' }} />
-                        </div>
+            {/* Center Phone */}
+            <div className="drop-shadow-2xl">
+              <div className="w-72 lg:w-80 bg-gray-900 rounded-[3rem] p-3">
+                <div className="bg-white rounded-[2.5rem] overflow-hidden">
+                  {/* Status bar */}
+                  <div className="flex justify-between items-center px-6 py-2 text-xs text-gray-500">
+                    <span>09:41</span>
+                    <div className="flex items-center gap-1">
+                      <div className="w-4 h-2 bg-gray-400 rounded-sm"></div>
+                    </div>
+                  </div>
+
+                  {/* App content */}
+                  <div className="px-5 pb-6">
+                    <div className="text-center mb-4">
+                      <p className="text-xs text-gray-500">Tax Year 2025-26</p>
+                    </div>
+
+                    {/* Stats */}
+                    <div className="grid grid-cols-3 gap-2 mb-4">
+                      <div className="bg-gray-50 rounded-xl p-2 text-center">
+                        <p className="text-[10px] text-gray-500">Income</p>
+                        <p className="text-base font-bold text-[#00e3ec]">£52,340</p>
+                      </div>
+                      <div className="bg-gray-50 rounded-xl p-2 text-center">
+                        <p className="text-[10px] text-gray-500">Expenses</p>
+                        <p className="text-base font-bold text-red-500">£12,847</p>
+                      </div>
+                      <div className="bg-gray-50 rounded-xl p-2 text-center">
+                        <p className="text-[10px] text-gray-500">Tax Due</p>
+                        <p className="text-base font-bold text-gray-900">£6,247</p>
                       </div>
                     </div>
 
-                    {/* App Header */}
-                    <div className="px-5 py-3 flex items-center justify-between">
-                      <div>
-                        <p className="text-xs text-gray-500">Hello,</p>
-                        <p className="text-base font-semibold text-gray-900">Alex</p>
-                      </div>
-                      <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                        <svg className="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                        </svg>
-                      </div>
-                    </div>
-
-                    {/* Balance Card */}
-                    <div className="mx-4 bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-2xl p-4 text-white">
-                      <div className="flex items-center gap-1.5 mb-1">
-                        <div className="w-2 h-2 bg-[#00e3ec] rounded-full" />
-                        <span className="text-xs text-gray-300">Tax Refund Estimate</span>
-                      </div>
-                      <p className="text-2xl font-bold tracking-wider">£ ********</p>
-                      <div className="flex justify-between mt-3 pt-3 border-t border-white/10">
-                        <div>
-                          <p className="text-[10px] text-gray-400">Income</p>
-                          <p className="text-sm font-semibold">£45,000</p>
+                    {/* Transactions */}
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Recent Transactions</p>
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                            <span className="text-orange-500 text-xs font-bold">A</span>
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium">Amazon</p>
+                            <p className="text-xs text-gray-500">Office Supplies</p>
+                          </div>
                         </div>
                         <div className="text-right">
-                          <p className="text-[10px] text-gray-400">Expenses</p>
-                          <p className="text-sm font-semibold">£8,500</p>
+                          <p className="text-sm font-semibold">£47.99</p>
+                          <span className="text-xs bg-[#00e3ec]/10 text-[#00b8bf] px-2 py-0.5 rounded-full">
+                            Allowable
+                          </span>
                         </div>
                       </div>
-                    </div>
-
-                    {/* Quick Links */}
-                    <div className="px-4 mt-4">
-                      <p className="text-sm font-semibold text-gray-900 mb-3">Quick Links</p>
-                      <div className="grid grid-cols-4 gap-3">
-                        {[
-                          { icon: "📊", label: "Dashboard" },
-                          { icon: "📝", label: "Returns" },
-                          { icon: "💷", label: "Expenses" },
-                          { icon: "⚙️", label: "Settings" },
-                        ].map((item) => (
-                          <div key={item.label} className="flex flex-col items-center gap-1.5">
-                            <div className="w-11 h-11 bg-gray-50 rounded-xl flex items-center justify-center text-lg">
-                              {item.icon}
-                            </div>
-                            <span className="text-[10px] text-gray-600">{item.label}</span>
+                      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                            <span className="text-red-500 text-xs font-bold">G</span>
                           </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Recent Activity */}
-                    <div className="px-4 mt-4 flex-1">
-                      <div className="flex items-center justify-between mb-3">
-                        <p className="text-sm font-semibold text-gray-900">Recent Transactions</p>
-                        <span className="text-xs text-[#00e3ec]">See all</span>
-                      </div>
-                      <div className="space-y-2.5">
-                        {[
-                          { name: "Client Payment", amount: "+£2,500.00", icon: "💼" },
-                          { name: "Software Sub", amount: "-£49.99", icon: "💻" },
-                        ].map((tx) => (
-                          <div key={tx.name} className="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-                            <div className="w-9 h-9 bg-white rounded-lg flex items-center justify-center text-base shadow-sm">
-                              {tx.icon}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <p className="text-sm font-medium text-gray-900 truncate">{tx.name}</p>
-                              <p className="text-xs text-gray-500">Today</p>
-                            </div>
-                            <p className={`text-sm font-semibold ${tx.amount.startsWith('+') ? 'text-green-600' : 'text-gray-900'}`}>
-                              {tx.amount}
-                            </p>
+                          <div>
+                            <p className="text-sm font-medium">Google Ads</p>
+                            <p className="text-xs text-gray-500">Marketing</p>
                           </div>
-                        ))}
+                        </div>
+                        <div className="text-right">
+                          <p className="text-sm font-semibold">£120.00</p>
+                          <span className="text-xs bg-[#00e3ec]/10 text-[#00b8bf] px-2 py-0.5 rounded-full">
+                            Allowable
+                          </span>
+                        </div>
                       </div>
-                    </div>
-
-                    {/* Bottom Nav */}
-                    <div className="px-4 pb-6 pt-3 border-t border-gray-100 mt-auto">
-                      <div className="flex justify-around">
-                        {[
-                          { icon: "🏠", label: "Home", active: true },
-                          { icon: "📈", label: "Reports", active: false },
-                          { icon: "💳", label: "Cards", active: false },
-                          { icon: "⚙️", label: "Settings", active: false },
-                        ].map((nav) => (
-                          <div key={nav.label} className="flex flex-col items-center gap-1">
-                            <span className="text-lg">{nav.icon}</span>
-                            <span className={`text-[10px] ${nav.active ? 'text-[#00e3ec] font-medium' : 'text-gray-400'}`}>
-                              {nav.label}
-                            </span>
+                      <div className="flex items-center justify-between p-3 bg-amber-50 rounded-xl border border-amber-200">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center">
+                            <span className="text-amber-500 text-xs font-bold">?</span>
                           </div>
-                        ))}
+                          <div>
+                            <p className="text-sm font-medium">Costa Coffee</p>
+                            <p className="text-xs text-amber-600">Needs Review</p>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-sm font-semibold">£4.50</p>
+                          <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">Review</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Hand image positioned behind phone */}
-              <div className="absolute -bottom-16 -right-12 lg:-right-20 w-[280px] lg:w-[360px] z-0">
-                <Image
-                  src="/hand-phone.png"
-                  alt="Hand holding phone"
-                  width={360}
-                  height={450}
-                  className="w-full h-auto"
-                  style={{
-                    maskImage: 'linear-gradient(to top, black 60%, transparent 100%)',
-                    WebkitMaskImage: 'linear-gradient(to top, black 60%, transparent 100%)'
-                  }}
-                  priority
-                />
+            {/* Right illustration */}
+            <div className="hidden lg:flex items-center gap-4">
+              <div className="text-center">
+                <div className="w-28 h-28 bg-amber-100 rounded-2xl flex flex-col items-center justify-center mb-3">
+                  <svg className="w-9 h-9 text-amber-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <p className="text-gray-600 font-medium text-sm">
+                  Pay less tax. Get more
+                  <br />
+                  back from HMRC.
+                </p>
               </div>
-
-              {/* Decorative arrow pointing to phone */}
-              <svg
-                className="absolute -left-12 top-1/2 w-20 h-20 text-gray-400 hidden lg:block"
-                viewBox="0 0 100 100"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M10 70 Q 40 50, 70 40 Q 85 35, 95 25" strokeLinecap="round" />
-                <path d="M88 20 L 95 25 L 88 32" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
             </div>
           </div>
         </div>
