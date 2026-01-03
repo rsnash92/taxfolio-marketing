@@ -176,20 +176,20 @@ export default function AlternateHomePage() {
                   {/* App content */}
                   <div className="px-5 pb-6">
                     {/* AI Processing Banner */}
-                    <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-xl p-3 mb-4 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiLz48L3N2Zz4=')] opacity-50"></div>
+                    <div className="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-3 mb-4 relative overflow-hidden">
                       <div className="relative flex items-center gap-3">
-                        <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
-                          <Sparkles className="w-5 h-5 text-white" />
+                        <div className="flex items-center gap-1.5">
+                          <div className="w-2 h-2 bg-[#00e3ec] rounded-full animate-pulse" />
+                          <Sparkles className="w-4 h-4 text-[#00e3ec]" />
                         </div>
                         <div className="flex-1">
                           <p className="text-white font-semibold text-sm">AI Categorising</p>
-                          <p className="text-white/70 text-xs">247 transactions processed</p>
+                          <p className="text-gray-400 text-xs">247 transactions processed</p>
                         </div>
                         <div className="flex items-center gap-1">
-                          <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
-                          <div className="w-1.5 h-1.5 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                          <div className="w-1.5 h-1.5 bg-white/30 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                          <div className="w-1.5 h-1.5 bg-[#00e3ec] rounded-full animate-pulse"></div>
+                          <div className="w-1.5 h-1.5 bg-[#00e3ec]/60 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-1.5 h-1.5 bg-[#00e3ec]/30 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
                         </div>
                       </div>
                     </div>
