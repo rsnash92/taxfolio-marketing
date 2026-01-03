@@ -21,7 +21,8 @@ import {
   Clock,
   Check,
   ChevronDown,
-  Star
+  Star,
+  Sparkles
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -195,7 +196,13 @@ export default function AlternateHomePage() {
                     </div>
 
                     {/* Transactions */}
-                    <p className="text-sm font-semibold text-gray-700 mb-2">Recent Transactions</p>
+                    <div className="flex items-center justify-between mb-2">
+                      <p className="text-sm font-semibold text-gray-700">Recent Transactions</p>
+                      <div className="flex items-center gap-1 px-2 py-0.5 bg-gradient-to-r from-violet-500/10 to-[#00e3ec]/10 rounded-full">
+                        <Sparkles className="w-3 h-3 text-violet-500" />
+                        <span className="text-[10px] font-medium text-violet-600">AI Sorted</span>
+                      </div>
+                    </div>
                     <div className="space-y-2">
                       <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
                         <div className="flex items-center gap-3">
@@ -204,7 +211,10 @@ export default function AlternateHomePage() {
                           </div>
                           <div>
                             <p className="text-sm font-medium">Amazon</p>
-                            <p className="text-xs text-gray-500">Office Supplies</p>
+                            <p className="text-xs text-gray-500 flex items-center gap-1">
+                              <Cpu className="w-2.5 h-2.5 text-violet-400" />
+                              Office Supplies
+                            </p>
                           </div>
                         </div>
                         <div className="text-right">
@@ -221,7 +231,10 @@ export default function AlternateHomePage() {
                           </div>
                           <div>
                             <p className="text-sm font-medium">Google Ads</p>
-                            <p className="text-xs text-gray-500">Marketing</p>
+                            <p className="text-xs text-gray-500 flex items-center gap-1">
+                              <Cpu className="w-2.5 h-2.5 text-violet-400" />
+                              Marketing
+                            </p>
                           </div>
                         </div>
                         <div className="text-right">
