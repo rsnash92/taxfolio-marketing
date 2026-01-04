@@ -185,7 +185,7 @@ export default function AlternateHomePage() {
                 Login
               </Link>
               <Link
-                href="/signup"
+                href="https://intro.taxfolio.io"
                 className="px-5 py-2 bg-gradient-to-r from-[#0f172a] to-[#1e293b] text-white font-medium text-sm rounded-full hover:from-[#1e293b] hover:to-[#334155] transition-all"
               >
                 Get Started
@@ -223,7 +223,7 @@ export default function AlternateHomePage() {
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
-                href="/signup"
+                href="https://intro.taxfolio.io"
                 className="inline-flex items-center gap-3 pl-2 pr-6 py-2 bg-gradient-to-r from-[#0f172a] to-[#1e293b] text-white rounded-full font-medium hover:from-[#1e293b] hover:to-[#334155] transition-all shadow-lg"
               >
                 <span className="w-10 h-10 rounded-full bg-[#00e3ec] flex items-center justify-center">
@@ -574,7 +574,7 @@ export default function AlternateHomePage() {
           </div>
           <div className="text-center">
             <Link
-              href="/signup"
+              href="https://intro.taxfolio.io"
               className="inline-flex items-center gap-4 pl-2 pr-8 py-2 bg-gray-800 hover:bg-gray-700 rounded-full font-medium text-white transition-colors"
             >
               <span className="w-12 h-12 rounded-full bg-[#00e3ec] flex items-center justify-center">
@@ -798,7 +798,7 @@ export default function AlternateHomePage() {
               ))}
             </div>
             <Link
-              href="/signup"
+              href="https://intro.taxfolio.io"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#00e3ec] text-gray-900 rounded-full font-semibold hover:bg-[#00d4dc] transition-colors"
             >
               Get MTD Ready Now
@@ -831,7 +831,7 @@ export default function AlternateHomePage() {
               <p className="text-gray-600 text-sm mb-6">Perfect for simple freelancers</p>
 
               <Link
-                href="/signup"
+                href="https://intro.taxfolio.io"
                 className="flex items-center gap-3 pl-2 pr-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-full font-medium text-white transition-colors mb-6"
               >
                 <span className="w-10 h-10 rounded-full bg-[#00e3ec] flex items-center justify-center">
@@ -882,7 +882,7 @@ export default function AlternateHomePage() {
               <p className="text-gray-600 text-sm mb-6">For landlords & serious freelancers</p>
 
               <Link
-                href="/signup"
+                href="https://intro.taxfolio.io"
                 className="flex items-center gap-3 pl-2 pr-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-full font-medium text-white transition-colors mb-6"
               >
                 <span className="w-10 h-10 rounded-full bg-[#00e3ec] flex items-center justify-center">
@@ -923,7 +923,7 @@ export default function AlternateHomePage() {
               <p className="text-gray-600 text-sm mb-6">Pay once, use forever</p>
 
               <Link
-                href="/signup"
+                href="https://intro.taxfolio.io"
                 className="flex items-center gap-3 pl-2 pr-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-full font-medium text-white transition-colors mb-6"
               >
                 <span className="w-10 h-10 rounded-full bg-[#00e3ec] flex items-center justify-center">
@@ -1127,7 +1127,7 @@ export default function AlternateHomePage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link
-                href="/signup"
+                href="https://intro.taxfolio.io"
                 className="flex items-center gap-3 pl-2 pr-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-full font-semibold text-white transition-colors"
               >
                 <span className="w-10 h-10 rounded-full bg-[#00e3ec] flex items-center justify-center">
@@ -1185,7 +1185,7 @@ export default function AlternateHomePage() {
                 <li><Link href="#features" className="text-gray-400 hover:text-white transition-colors">Features</Link></li>
                 <li><Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
                 <li><Link href="/login" className="text-gray-400 hover:text-white transition-colors">Login</Link></li>
-                <li><Link href="/signup" className="text-gray-400 hover:text-white transition-colors">Sign Up</Link></li>
+                <li><Link href="https://intro.taxfolio.io" className="text-gray-400 hover:text-white transition-colors">Sign Up</Link></li>
               </ul>
             </div>
             {/* Resources */}
