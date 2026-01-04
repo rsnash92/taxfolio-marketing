@@ -1,4 +1,6 @@
-import { Metadata } from "next"
+"use client"
+
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -22,42 +24,154 @@ import {
   Check,
   ChevronDown,
   Star,
-  Brain
+  Brain,
+  Lightbulb,
+  Circle,
+  TrendingUp,
+  Loader2,
+  Store,
+  Home,
+  Laptop,
+  Bike,
+  FileX,
+  CalendarClock,
+  PoundSterling
 } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "TaxFolio - Boost Your Tax Productivity",
-  description: "Manage your UK self-assessment with confidence. TaxFolio makes tax returns effortless, insightful, and smart.",
+// Bank Connection Animation Component
+function BankConnectionMockup() {
+  const [step, setStep] = useState(0)
+  // Steps: 0 = initial, 1 = clicked, 2 = connecting, 3 = connected, 4 = pause before reset
+
+  useEffect(() => {
+    const timings = [2500, 800, 2000, 2000, 500]
+    const timer = setTimeout(() => {
+      setStep((prev) => (prev + 1) % 5)
+    }, timings[step])
+    return () => clearTimeout(timer)
+  }, [step])
+
+  return (
+    <div className="bg-[#00e3ec]/10 rounded-3xl p-8 flex justify-center">
+      <div className="w-64 bg-gray-900 rounded-[2.5rem] p-2.5 shadow-2xl">
+        <div className="bg-white rounded-[2rem] overflow-hidden p-4 h-[320px] flex flex-col">
+          {step < 3 ? (
+            <>
+              <p className="text-sm font-semibold text-gray-700 mb-4">
+                How would you prefer to share your income and tax details?
+              </p>
+
+              <div className="space-y-3">
+                {/* Connect Bank Option */}
+                <div
+                  className={`p-3 rounded-xl transition-all duration-300 ${
+                    step === 0
+                      ? "border-2 border-[#00e3ec] bg-[#00e3ec]/10"
+                      : step === 1
+                        ? "border-2 border-[#00e3ec] bg-[#00e3ec]/20 scale-[0.98]"
+                        : "border-2 border-[#00e3ec] bg-[#00e3ec]/10"
+                  }`}
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs bg-[#00e3ec] text-gray-900 font-medium px-2 py-0.5 rounded-full">Recommended</span>
+                  </div>
+                  <p className="font-semibold text-sm text-gray-900">Connect Bank Account</p>
+                  {step === 2 ? (
+                    <div className="flex items-center gap-2 mt-1">
+                      <Loader2 className="w-3 h-3 text-[#00e3ec] animate-spin" />
+                      <p className="text-xs text-[#00a8b0]">Connecting to Barclays...</p>
+                    </div>
+                  ) : (
+                    <p className="text-xs text-gray-500">Link securely. We&apos;ll categorise transactions automatically.</p>
+                  )}
+                </div>
+
+                <div className={`p-3 border border-gray-200 rounded-xl transition-opacity duration-300 ${step >= 1 ? "opacity-50" : ""}`}>
+                  <p className="font-semibold text-sm text-gray-900">Upload Bank Statements</p>
+                  <p className="text-xs text-gray-500">Upload CSV or PDF statements</p>
+                </div>
+
+                <div className={`p-3 border border-gray-200 rounded-xl transition-opacity duration-300 ${step >= 1 ? "opacity-50" : ""}`}>
+                  <p className="font-semibold text-sm text-gray-900">Continue Manually</p>
+                  <p className="text-xs text-gray-500">Enter transactions yourself</p>
+                </div>
+              </div>
+            </>
+          ) : (
+            /* Success State */
+            <div className="flex-1 flex flex-col justify-center animate-[fadeIn_0.5s_ease-out]">
+              <div className="w-16 h-16 mx-auto mb-4 bg-[#00e3ec]/20 rounded-full flex items-center justify-center">
+                <Check className="w-8 h-8 text-[#00e3ec] animate-[scaleIn_0.3s_ease-out]" />
+              </div>
+              <p className="text-center font-semibold text-gray-900 mb-1">Bank Connected!</p>
+              <p className="text-center text-xs text-gray-500 mb-4">Barclays Business Account</p>
+
+              <div className="bg-gray-50 rounded-xl p-3 mb-3">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-gray-500">Transactions found</span>
+                  <span className="font-semibold text-[#00e3ec]">247</span>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center gap-2 text-xs text-gray-500">
+                <Loader2 className="w-3 h-3 animate-spin" />
+                <span>Categorising with AI...</span>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default function AlternateHomePage() {
   return (
     <div className="min-h-screen bg-[#f8f9fc]">
+      {/* Custom animations for feature mockups */}
+      <style jsx global>{`
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+          from { transform: scale(0); opacity: 0; }
+          to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes slideUp {
+          from { transform: translateY(10px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes countUp {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
       {/* Header */}
       <header className="border-b border-gray-100 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-[#00e3ec] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">#</span>
-              </div>
-              <span className="text-xl font-semibold text-gray-900">TaxFolio</span>
-            </div>
+            <Link href="/alternate" className="flex items-center">
+              <Image
+                src="/taxfolio.png"
+                alt="Taxfolio"
+                width={140}
+                height={35}
+                className="h-8 w-auto"
+              />
+            </Link>
 
             {/* Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              <Link href="/alternate" className="text-[#00e3ec] font-medium text-sm">
-                Home
-              </Link>
               <Link href="#features" className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
                 Features
               </Link>
-              <Link href="#about" className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
-                About
-              </Link>
-              <Link href="/pricing" className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
+              <Link href="#pricing" className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
                 Pricing
+              </Link>
+              <Link href="#faq" className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
+                FAQ
               </Link>
             </nav>
 
@@ -68,7 +182,7 @@ export default function AlternateHomePage() {
                 className="inline-flex items-center gap-2 px-5 py-2 text-gray-700 font-medium text-sm rounded-full border border-gray-200 hover:border-gray-300 transition-colors bg-white"
               >
                 <Lock className="w-3.5 h-3.5" />
-                LOGIN
+                Login
               </Link>
               <Link
                 href="/signup"
@@ -86,10 +200,13 @@ export default function AlternateHomePage() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left Content */}
           <div className="max-w-xl">
-            {/* HMRC Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded-full mb-6">
-              <Building2 className="w-4 h-4 text-[#00e3ec]" />
-              <span className="text-sm font-medium text-gray-700">HMRC Recognised Software</span>
+            {/* MTD Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00e3ec]/10 border border-[#00e3ec]/20 rounded-full mb-6">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00e3ec] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00e3ec]"></span>
+              </span>
+              <span className="text-sm font-medium text-[#00a8b0]">Ready for Making Tax Digital 2026</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight tracking-tight" style={{ fontFamily: 'var(--font-kanit), sans-serif' }}>
@@ -97,7 +214,7 @@ export default function AlternateHomePage() {
               <span className="text-[#00e3ec]">Self Assessment</span>
               <br />
               in 15 minutes{" "}
-              <ArrowRight className="inline-block w-8 h-8 md:w-10 md:h-10 text-[#00e3ec]" />
+              <ArrowRight className="inline-block w-8 h-8 md:w-10 md:h-10 text-[#00e3ec] stroke-[3]" />
             </h1>
 
             <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-md">
@@ -125,18 +242,37 @@ export default function AlternateHomePage() {
             {/* Social Proof */}
             <div className="mt-10 flex items-center gap-4">
               <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden"
-                  />
-                ))}
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-xs font-medium text-gray-600">
-                  +99
-                </div>
+                <Image
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face"
+                  alt="Beta user"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                />
+                <Image
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+                  alt="Beta user"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                />
+                <Image
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face"
+                  alt="Beta user"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                />
+                <Image
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
+                  alt="Beta user"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                />
               </div>
               <p className="text-gray-600 text-sm">
-                Rated by <span className="font-semibold">5,000+</span> users across the UK
+                <span className="font-semibold">Join the beta</span> · Be among the first
               </p>
             </div>
           </div>
@@ -306,14 +442,14 @@ export default function AlternateHomePage() {
                       </div>
 
                       {/* Transaction 4 - AI suggestion */}
-                      <div className="flex items-center justify-between p-3 bg-violet-50 rounded-xl border border-violet-200">
+                      <div className="flex items-center justify-between p-3 bg-[#00e3ec]/10 rounded-xl border border-[#00e3ec]/30">
                         <div className="flex items-center gap-3">
-                          <div className="w-9 h-9 bg-violet-100 rounded-lg flex items-center justify-center">
-                            <Brain className="w-4 h-4 text-violet-500 animate-pulse" />
+                          <div className="w-9 h-9 bg-[#00e3ec]/20 rounded-lg flex items-center justify-center">
+                            <Brain className="w-4 h-4 text-[#00a8b0] animate-pulse" />
                           </div>
                           <div>
-                            <p className="font-medium text-violet-700 text-sm">Costa</p>
-                            <p className="text-xs text-violet-500">Personal?</p>
+                            <p className="font-medium text-gray-900 text-sm">Costa</p>
+                            <p className="text-xs text-[#00a8b0]">Personal?</p>
                           </div>
                         </div>
                         <div className="flex gap-1.5">
@@ -383,11 +519,14 @@ export default function AlternateHomePage() {
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { title: "Spreadsheet chaos", desc: "Rows of receipts, lost data, hours of manual entry every month." },
-              { title: "January panic", desc: "Scrambling to find receipts before the deadline, stressed and confused." },
-              { title: "Expensive accountants", desc: "£300+ just to file a simple return. Money you'd rather keep." },
+              { icon: FileX, title: "Spreadsheet chaos", desc: "Rows of receipts, lost data, hours of manual entry every month." },
+              { icon: CalendarClock, title: "January panic", desc: "Scrambling to find receipts before the deadline, stressed and confused." },
+              { icon: PoundSterling, title: "Expensive accountants", desc: "£300+ just to file a simple return. Money you'd rather keep." },
             ].map((problem) => (
               <div key={problem.title} className="bg-white p-6 rounded-xl border border-gray-200">
+                <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mb-3">
+                  <problem.icon className="w-5 h-5 text-red-500" />
+                </div>
                 <h3 className="font-semibold text-gray-900 mb-2">{problem.title}</h3>
                 <p className="text-gray-500 text-sm">{problem.desc}</p>
               </div>
@@ -398,155 +537,251 @@ export default function AlternateHomePage() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-white py-20">
+      <section className="bg-gray-950 py-20">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               How TaxFolio works
             </h2>
-            <p className="text-gray-500">From bank connection to tax clarity in three simple steps.</p>
+            <p className="text-gray-400">From bank connection to tax clarity in three simple steps.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             {[
-              { step: 1, title: "Connect Bank", desc: "Securely link your business account in seconds via Open Banking." },
-              { step: 2, title: "AI Categorises", desc: "Our AI sorts every transaction into the right tax categories automatically." },
-              { step: 3, title: "Review & Done", desc: "Confirm the AI's suggestions and see your tax position instantly." },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div className="w-12 h-12 rounded-full bg-[#00e3ec] text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">
-                  {item.step}
+              { step: 1, icon: Building2, title: "Connect Bank", desc: "Securely link your business account in seconds via TrueLayer." },
+              { step: 2, icon: Cpu, title: "AI Categorises", desc: "Our AI sorts every transaction into the right tax categories automatically." },
+              { step: 3, icon: CheckCircle2, title: "Review & Done", desc: "Confirm the AI's suggestions and see your tax position instantly." },
+            ].map((item, index) => (
+              <div key={item.step} className="relative text-center">
+                {/* Connector line */}
+                {index < 2 && (
+                  <div className="hidden md:block absolute top-16 left-1/2 w-full h-px bg-gradient-to-r from-gray-700 to-gray-800" />
+                )}
+
+                {/* Step card */}
+                <div className="relative">
+                  <div className="w-28 h-28 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-[#00e3ec]/20 to-[#00c4d4]/10 border border-[#00e3ec]/20 flex items-center justify-center">
+                    <item.icon className="w-12 h-12 text-[#00e3ec]" />
+                  </div>
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-[#00e3ec] text-black flex items-center justify-center text-sm font-bold">
+                    {item.step}
+                  </div>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm">{item.desc}</p>
+
+                <h3 className="font-semibold text-white text-lg mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
-          <div className="text-center mt-10">
+          <div className="text-center">
             <Link
               href="/signup"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#00e3ec] text-black rounded-full font-semibold hover:bg-[#12c98a] transition-colors"
+              className="inline-flex items-center gap-4 pl-2 pr-8 py-2 bg-gray-800 hover:bg-gray-700 rounded-full font-medium text-white transition-colors"
             >
-              GET STARTED FREE
+              <span className="w-12 h-12 rounded-full bg-[#00e3ec] flex items-center justify-center">
+                <ArrowRight className="w-6 h-6 text-black stroke-[3]" />
+              </span>
+              Get Started for Free
             </Link>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="bg-[#f8f9fc] py-20">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Everything you need. Nothing you don&apos;t.
-            </h2>
-            <p className="text-gray-500">Built for UK freelancers and sole traders who want simple, not complicated.</p>
+      <section id="features" className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Feature 1: Bank Connection */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <BankConnectionMockup />
+
+            <div>
+              <p className="text-[#00e3ec] font-semibold mb-2">Easy</p>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Your financial data, effortlessly collected</h3>
+              <p className="text-gray-600 text-lg">
+                Connect your bank or upload a simple spreadsheet. We&apos;ll pull in all your business transactions so you
+                can quickly review income and expenses. No guesswork, no missed details.
+              </p>
+            </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+          {/* Feature 2: AI Categorisation */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div className="order-2 md:order-1">
+              <p className="text-[#00e3ec] font-semibold mb-2">Smart</p>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">AI-powered transaction sorting</h3>
+              <p className="text-gray-600 text-lg mb-6">
+                Our AI analyses every transaction and automatically assigns the correct HMRC category. Mileage, software
+                subscriptions, office supplies - it knows them all.
+              </p>
+              <div className="flex items-center gap-8">
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-[#00e3ec]">95%</p>
+                  <p className="text-sm text-gray-500">Auto-categorised</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-[#00e3ec]">2 min</p>
+                  <p className="text-sm text-gray-500">Average review time</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="order-1 md:order-2 bg-[#00e3ec]/10 rounded-3xl p-8 flex justify-center">
+              <div className="bg-white rounded-2xl shadow-lg p-4 w-72">
+                <div className="flex items-center gap-2 mb-4">
+                  <Lightbulb className="text-amber-500 w-5 h-5 animate-pulse" />
+                  <span className="font-semibold text-gray-900">Smart Tax Review</span>
+                </div>
+
+                <div className="space-y-2 mb-4">
+                  {/* Animated progress - items complete one by one */}
+                  <div className="flex items-center gap-2">
+                    <Check className="text-[#00e3ec] w-4 h-4" />
+                    <span className="text-sm text-[#00a8b0]">Income analysis</span>
+                  </div>
+                  <div className="flex items-center gap-2 animate-[fadeIn_0.5s_ease-in-out_1s_both]">
+                    <Check className="text-[#00e3ec] w-4 h-4 animate-[scaleIn_0.3s_ease-out_1.5s_both]" />
+                    <span className="text-sm text-[#00a8b0]">Allowances & relief check</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 rounded-full border-2 border-[#00e3ec] border-t-transparent animate-spin" />
+                    <span className="text-sm text-gray-500">Checking deductions</span>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  {/* Suggestions slide in */}
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 animate-[slideUp_0.5s_ease-out_0.5s_both]">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Lightbulb className="text-blue-500 w-4 h-4" />
+                      <span className="font-semibold text-sm text-gray-900">Smart Suggestion</span>
+                    </div>
+                    <p className="text-xs text-gray-600">
+                      You can claim £312 for home office expenses. Want us to add this?
+                    </p>
+                  </div>
+                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 animate-[slideUp_0.5s_ease-out_1s_both]">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Lightbulb className="text-amber-500 w-4 h-4" />
+                      <span className="font-semibold text-sm text-gray-900">Smart Suggestion</span>
+                    </div>
+                    <p className="text-xs text-gray-600">We found 847 business miles. That&apos;s £380 in deductions!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Feature 3: Real-time Tax */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="bg-[#00e3ec]/10 rounded-3xl p-8 flex justify-center">
+              <div className="w-64 bg-gray-900 rounded-[2.5rem] p-2.5 shadow-2xl">
+                <div className="bg-white rounded-[2rem] overflow-hidden p-4">
+                  <div className="text-center mb-4">
+                    <p className="text-xs text-gray-500">Your Estimated Tax</p>
+                    {/* Animated counter effect */}
+                    <p className="text-4xl font-bold text-gray-900 animate-[countUp_2s_ease-out_both]">£6,247</p>
+                    <p className="text-xs text-gray-500 flex items-center justify-center gap-1">
+                      <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                      Updated just now
+                    </p>
+                  </div>
+
+                  <div className="bg-[#00e3ec]/10 border border-[#00e3ec]/30 rounded-xl p-3 mb-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-600">Income Tax</span>
+                      <span className="text-sm font-semibold animate-[fadeIn_0.5s_ease-out_0.3s_both]">£4,892</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">National Insurance</span>
+                      <span className="text-sm font-semibold animate-[fadeIn_0.5s_ease-out_0.5s_both]">£1,355</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#00e3ec]/20 rounded-xl p-3 text-center animate-[slideUp_0.5s_ease-out_0.8s_both]">
+                    <TrendingUp className="text-[#00a8b0] w-5 h-5 mx-auto mb-1 animate-bounce" />
+                    <p className="text-xs text-[#00848a] font-medium">You&apos;re saving £847 with TaxFolio!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p className="text-[#00e3ec] font-semibold mb-2">Real-time</p>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Know exactly what you owe. Always.</h3>
+              <p className="text-gray-600 text-lg mb-6">
+                No more end-of-year surprises. See your estimated tax bill update in real-time as you add transactions.
+                Plan ahead and never be caught off guard.
+              </p>
+              <div className="flex items-center gap-2 text-[#00e3ec]">
+                <Check className="w-5 h-5" />
+                <span>Updates instantly as you work</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Made for Every UK Earner */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Made for every UK earner</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We support every kind of UK earner with fast, accurate HMRC tax filing. It&apos;s time to break up with
+              your accountant.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6">
             {[
-              { icon: Cpu, title: "AI Categorisation", desc: "Claude AI understands context. 'AMZN MKTP' → office supplies or personal? AI knows the difference." },
-              { icon: Landmark, title: "Bank Connection", desc: "Connect via Open Banking. Transactions sync automatically. All major UK banks supported." },
-              { icon: Smartphone, title: "Mobile First", desc: "Review transactions on your phone. Swipe to confirm. Do your taxes while commuting." },
-              { icon: Calendar, title: "Real-time Tax", desc: "See your estimated tax bill update as you confirm transactions. No more January surprises." },
-              { icon: Send, title: "Direct HMRC Submission", desc: "Submit quarterly updates directly to HMRC. No spreadsheets. No third-party software." },
-              { icon: Car, title: "Mileage Tracker", desc: "Log business miles and we'll calculate your allowance automatically using HMRC rates." },
-            ].map((feature) => (
-              <div key={feature.title} className="bg-white p-6 rounded-xl border border-gray-200 hover:border-[#00e3ec] transition-colors">
-                <feature.icon className="w-8 h-8 text-[#00e3ec] mb-4" />
-                <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-500 text-sm">{feature.desc}</p>
+              {
+                icon: Store,
+                title: "Sole Trader",
+                description: "Small business owners, self-employed professionals, side hustlers running your own venture",
+                iconColor: "text-[#00a8b0]",
+              },
+              {
+                icon: Home,
+                title: "Property Owner",
+                description: "Buy-to-let landlords, Airbnb hosts, rent-a-room schemes, commercial property owners",
+                iconColor: "text-[#00a8b0]",
+              },
+              {
+                icon: Laptop,
+                title: "Freelancers",
+                description: "Writers, designers, developers, marketers, consultants juggling multiple clients",
+                iconColor: "text-[#00a8b0]",
+              },
+              {
+                icon: Bike,
+                title: "Couriers & Drivers",
+                description: "Uber Eats, Deliveroo, Amazon Flex, Just Eat and taxi drivers",
+                iconColor: "text-[#00a8b0]",
+              },
+            ].map((audience) => (
+              <div
+                key={audience.title}
+                className="p-6 bg-[#00e3ec]/5 rounded-2xl hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-[#00e3ec]/20 rounded-xl flex items-center justify-center mb-4">
+                  <audience.icon className={`w-6 h-6 ${audience.iconColor}`} />
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">{audience.title}</h3>
+                <p className="text-gray-600 text-sm">{audience.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Supported Features */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Built for UK sole traders & landlords
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {/* Supported */}
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-[#00e3ec]" />
-                Supported
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  "Self-employment income (SA103)",
-                  "Property rental income (SA105)",
-                  "Business mileage claims",
-                  "Home office deductions",
-                  "Quarterly MTD updates",
-                  "AI transaction categorisation",
-                  "Bank connections",
-                  "PDF tax summaries",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-sm text-gray-600">
-                    <Check className="w-4 h-4 text-[#00e3ec]" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Coming Soon */}
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Clock className="w-5 h-5 text-amber-500" />
-                Coming Soon
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  "Capital gains (SA108)",
-                  "Dividend income",
-                  "Multiple employments",
-                  "Receipt scanning",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-sm text-gray-600">
-                    <Clock className="w-4 h-4 text-amber-500" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Not Supported */}
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <X className="w-5 h-5 text-gray-400" />
-                Not Supported
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  "Foreign income (SA106)",
-                  "Partnership income",
-                  "VAT-registered businesses",
-                  "Limited companies",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-sm text-gray-600">
-                    <X className="w-4 h-4 text-gray-400" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="text-xs text-gray-400 mt-4">These require specialist software or an accountant.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* MTD Section */}
-      <section className="bg-amber-50 py-16 border-y border-amber-200">
+      <section className="bg-gradient-to-r from-[#0f172a] to-[#1e293b] py-16">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-3xl mx-auto text-center">
-            <AlertTriangle className="w-12 h-12 text-amber-500 mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <AlertTriangle className="w-12 h-12 text-[#00e3ec] mx-auto mb-4" />
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               April 2026 is coming. Are you ready?
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-300 mb-6">
               Making Tax Digital becomes mandatory for sole traders and landlords earning over £50,000.
               That&apos;s 780,000 people who&apos;ll need digital records and quarterly submissions.
             </p>
@@ -556,7 +791,7 @@ export default function AlternateHomePage() {
                 "Quarterly updates",
                 "Direct HMRC submission",
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-gray-700">
+                <div key={item} className="flex items-center gap-2 text-gray-200">
                   <CheckCircle2 className="w-5 h-5 text-[#00e3ec]" />
                   {item}
                 </div>
@@ -564,7 +799,7 @@ export default function AlternateHomePage() {
             </div>
             <Link
               href="/signup"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 text-white rounded-full font-semibold hover:bg-amber-600 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#00e3ec] text-gray-900 rounded-full font-semibold hover:bg-[#00d4dc] transition-colors"
             >
               Get MTD Ready Now
             </Link>
@@ -573,127 +808,250 @@ export default function AlternateHomePage() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="bg-[#f8f9fc] py-20">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section id="pricing" className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Simple, transparent pricing
-            </h2>
-            <p className="text-gray-500">No credit card required. Cancel anytime.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Save money and time with TaxFolio</h2>
+            <p className="text-lg text-gray-600">
+              Smarter tax solutions at a fraction of the cost of a traditional accountant.
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {/* Lite */}
-            <div className="bg-white p-8 rounded-xl border border-gray-200">
-              <h3 className="text-xl font-semibold text-gray-900">Lite</h3>
-              <div className="mt-4 mb-6">
-                <span className="text-4xl font-bold text-gray-900">£69.99</span>
-                <span className="text-gray-500">/year</span>
+            <div className="rounded-2xl p-6 transition-shadow border border-gray-200 hover:shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Lite</h3>
+              <div className="mb-4 flex items-baseline gap-1">
+                <span className="text-4xl font-bold text-gray-900">£29</span>
+                <div className="text-gray-500">
+                  <span className="text-lg">/return</span>
+                  <span className="text-sm ml-1">inc. VAT</span>
+                </div>
               </div>
-              <p className="text-gray-500 text-sm mb-6">Perfect for simple freelancers</p>
-              <ul className="space-y-3 mb-8">
+              <p className="text-gray-600 text-sm mb-6">Perfect for simple freelancers</p>
+
+              <Link
+                href="/signup"
+                className="flex items-center gap-3 pl-2 pr-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-full font-medium text-white transition-colors mb-6"
+              >
+                <span className="w-10 h-10 rounded-full bg-[#00e3ec] flex items-center justify-center">
+                  <ArrowRight className="w-5 h-5 text-black stroke-[3]" />
+                </span>
+                Start Free Trial
+              </Link>
+
+              <ul className="space-y-3 text-sm text-gray-700">
                 {[
                   { text: "1 bank connection", included: true },
                   { text: "100 transactions/month", included: true },
                   { text: "AI categorisation", included: true },
-                  { text: "SA103 breakdown", included: true },
-                  { text: "Landlord features", included: false },
-                  { text: "MTD quarterly reports", included: false },
-                  { text: "Direct HMRC submission", included: false },
-                ].map((item) => (
-                  <li key={item.text} className="flex items-center gap-2 text-sm">
-                    {item.included ? (
-                      <Check className="w-4 h-4 text-[#00e3ec]" />
+                  { text: "Full SA103 breakdown", included: true },
+                  { text: "Direct HMRC submission", included: true },
+                  { text: "SA105 (Landlords)", included: false },
+                  { text: "MTD quarterly breakdown", included: false },
+                  { text: "Priority support", included: false },
+                ].map((feature, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    {feature.included ? (
+                      <Check className="text-[#00e3ec] w-4 h-4 flex-shrink-0" />
                     ) : (
-                      <X className="w-4 h-4 text-gray-300" />
+                      <X className="text-gray-300 w-4 h-4 flex-shrink-0" />
                     )}
-                    <span className={item.included ? "text-gray-700" : "text-gray-400"}>{item.text}</span>
+                    <span className={feature.included ? "" : "text-gray-400"}>{feature.text}</span>
                   </li>
                 ))}
               </ul>
+            </div>
+
+            {/* Pro */}
+            <div className="rounded-2xl p-6 transition-shadow border-2 border-[#00e3ec] shadow-lg relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="bg-[#00e3ec] text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Most Popular
+                </span>
+              </div>
+
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Pro</h3>
+              <div className="mb-4 flex items-baseline gap-1">
+                <span className="text-4xl font-bold text-gray-900">£99</span>
+                <div className="text-gray-500">
+                  <span className="text-lg">/return</span>
+                  <span className="text-sm ml-1">inc. VAT</span>
+                </div>
+              </div>
+              <p className="text-gray-600 text-sm mb-6">For landlords & serious freelancers</p>
+
               <Link
                 href="/signup"
-                className="block text-center px-6 py-3 border border-gray-900 text-gray-900 rounded-full font-semibold hover:bg-gray-50 transition-colors"
+                className="flex items-center gap-3 pl-2 pr-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-full font-medium text-white transition-colors mb-6"
               >
+                <span className="w-10 h-10 rounded-full bg-[#00e3ec] flex items-center justify-center">
+                  <ArrowRight className="w-5 h-5 text-black stroke-[3]" />
+                </span>
                 Start Free Trial
               </Link>
-            </div>
-            {/* Pro */}
-            <div className="bg-white p-8 rounded-xl border-2 border-[#00e3ec] relative">
-              <div className="absolute -top-3 right-4 px-3 py-1 bg-[#00e3ec] text-black text-xs font-bold rounded">
-                MOST POPULAR
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900">Pro</h3>
-              <div className="mt-4 mb-6">
-                <span className="text-4xl font-bold text-gray-900">£129.99</span>
-                <span className="text-gray-500">/year</span>
-              </div>
-              <p className="text-gray-500 text-sm mb-6">For landlords & serious freelancers</p>
-              <ul className="space-y-3 mb-8">
+
+              <ul className="space-y-3 text-sm text-gray-700">
                 {[
                   "Unlimited bank connections",
                   "Unlimited transactions",
                   "AI categorisation",
-                  "SA103 & SA105 forms",
-                  "MTD quarterly breakdowns",
+                  "Full SA103 & SA105",
                   "Direct HMRC submission",
+                  "MTD quarterly breakdown",
                   "Mileage tracker",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-sm text-gray-700">
-                    <Check className="w-4 h-4 text-[#00e3ec]" />
-                    {item}
+                  "Priority support",
+                ].map((feature, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    <Check className="text-[#00e3ec] w-4 h-4 flex-shrink-0" />
+                    <span>{feature}</span>
                   </li>
                 ))}
               </ul>
+            </div>
+
+            {/* Lifetime */}
+            <div className="rounded-2xl p-6 transition-shadow border border-gray-200 bg-gradient-to-b from-amber-50 to-white hover:shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Lifetime</h3>
+              <div className="mb-4 flex items-baseline gap-1">
+                <span className="text-4xl font-bold text-gray-900">£249</span>
+                <div className="text-gray-500">
+                  <span className="text-lg">/one-time</span>
+                  <span className="text-sm ml-1">inc. VAT</span>
+                </div>
+              </div>
+              <p className="text-gray-600 text-sm mb-6">Pay once, use forever</p>
+
               <Link
                 href="/signup"
-                className="block text-center px-6 py-3 bg-[#00e3ec] text-black rounded-full font-semibold hover:bg-[#12c98a] transition-colors"
+                className="flex items-center gap-3 pl-2 pr-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-full font-medium text-white transition-colors mb-6"
               >
-                Start Free Trial
+                <span className="w-10 h-10 rounded-full bg-[#00e3ec] flex items-center justify-center">
+                  <ArrowRight className="w-5 h-5 text-black stroke-[3]" />
+                </span>
+                Get Lifetime Access
               </Link>
+
+              <ul className="space-y-3 text-sm text-gray-700">
+                {[
+                  "Everything in Pro",
+                  "All future updates",
+                  "Lifetime access",
+                ].map((feature, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    <Check className="text-[#00e3ec] w-4 h-4 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+                <li className="flex items-center gap-2">
+                  <Star className="text-amber-500 w-4 h-4 flex-shrink-0" />
+                  <span>No recurring fees</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Star className="text-amber-500 w-4 h-4 flex-shrink-0" />
+                  <span>Best value!</span>
+                </li>
+              </ul>
             </div>
           </div>
+
+          <p className="text-center text-sm text-gray-500 mt-8">
+            All prices include VAT. 14-day free trial, no credit card required.
+          </p>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white py-20">
+      <section className="bg-[#f8f9fc] py-20">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Trusted by sole traders across the UK
+              Real stories from happy customers
             </h2>
-            <div className="flex justify-center gap-1">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
-              ))}
+            <p className="text-lg text-gray-600">Join thousands who&apos;ve simplified their taxes</p>
+          </div>
+
+          {/* Featured Testimonial */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
+            <div className="bg-white rounded-2xl p-8 shadow-lg flex items-center justify-center">
+              <div className="w-64 bg-gray-900 rounded-[2rem] p-2">
+                <div className="bg-white rounded-[1.5rem] p-4">
+                  <p className="text-sm text-center text-gray-600">Tax return submitted!</p>
+                  <div className="text-center mt-2">
+                    <span className="text-2xl">🎉</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-2xl p-8 text-white flex items-center">
+              <div>
+                <p className="text-2xl font-bold mb-4">
+                  &ldquo;Excellent app! Did my tax return in 15 minutes. Saved me £400 vs my accountant.&rdquo;
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-[#00e3ec]/20 rounded-full flex items-center justify-center text-lg font-bold text-[#00e3ec]">
+                    J
+                  </div>
+                  <div>
+                    <p className="font-semibold">James Wilson</p>
+                    <p className="text-gray-400">Freelance Developer</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+          {/* Review Cards */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
-                quote: "Finally, tax software that doesn't make me want to cry. The AI categorisation is incredibly accurate.",
-                name: "Sarah T.",
-                role: "Freelance Designer",
-                highlight: "Saved me hours every month",
+                name: "Sarah Thompson",
+                initial: "S",
+                bgColor: "bg-[#00e3ec]/20",
+                textColor: "text-[#00a8b0]",
+                quote: "Finally, tax software that doesn't make me want to cry. The AI categorisation is spot on!",
               },
               {
-                quote: "I was dreading MTD but TaxFolio made it completely painless. Set up in 10 minutes.",
-                name: "James M.",
-                role: "Property Landlord",
-                highlight: "MTD ready in 10 minutes",
+                name: "Mike Chen",
+                initial: "M",
+                bgColor: "bg-blue-200",
+                textColor: "text-blue-700",
+                quote: "As a landlord with 3 properties, this has saved me hours. The property income tracking is brilliant.",
               },
               {
-                quote: "The quarterly view is brilliant. I can see exactly what I owe each quarter instead of panicking in January.",
-                name: "Priya K.",
-                role: "IT Contractor",
-                highlight: "No more January panic",
+                name: "Emma Davies",
+                initial: "E",
+                bgColor: "bg-purple-200",
+                textColor: "text-purple-700",
+                quote: "I was dreading MTD but TaxFolio made it painless. Set up quarterly updates in 10 minutes.",
               },
             ].map((testimonial) => (
-              <div key={testimonial.name} className="bg-gray-50 p-6 rounded-xl">
-                <p className="text-[#00e3ec] text-sm font-medium mb-2">{testimonial.highlight}</p>
-                <p className="text-gray-700 mb-4">&quot;{testimonial.quote}&quot;</p>
-                <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                <p className="text-sm text-gray-500">{testimonial.role}</p>
+              <div key={testimonial.name} className="bg-white rounded-2xl p-6 shadow">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <div
+                      className={`w-10 h-10 rounded-full ${testimonial.bgColor} flex items-center justify-center text-sm font-medium ${testimonial.textColor}`}
+                    >
+                      {testimonial.initial}
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sm text-gray-900">{testimonial.name}</p>
+                      <div className="flex text-yellow-400">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-3 h-3 fill-current" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                  </svg>
+                </div>
+                <p className="text-gray-600 text-sm">&ldquo;{testimonial.quote}&rdquo;</p>
               </div>
             ))}
           </div>
@@ -765,18 +1123,20 @@ export default function AlternateHomePage() {
               Ready to take control of your taxes?
             </h2>
             <p className="text-gray-400 mb-8">
-              Join thousands of UK sole traders and landlords who&apos;ve made self-assessment simple. Start your free trial today.
+              Join thousands of UK sole traders and landlords who&apos;ve made self-assessment simple.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link
                 href="/signup"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#00e3ec] text-black rounded-full font-semibold hover:bg-[#12c98a] transition-colors"
+                className="flex items-center gap-3 pl-2 pr-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-full font-semibold text-white transition-colors"
               >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5" />
+                <span className="w-10 h-10 rounded-full bg-[#00e3ec] flex items-center justify-center">
+                  <ArrowRight className="w-5 h-5 text-black stroke-[3]" />
+                </span>
+                Get Started for Free
               </Link>
               <Link
-                href="/pricing"
+                href="#pricing"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-gray-600 text-white rounded-full font-semibold hover:bg-gray-800 transition-colors"
               >
                 View Pricing
@@ -807,12 +1167,15 @@ export default function AlternateHomePage() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-[#00e3ec] rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">#</span>
-                </div>
-                <span className="text-xl font-semibold text-white">TaxFolio</span>
-              </div>
+              <Link href="/alternate" className="flex items-center mb-4">
+                <Image
+                  src="/taxfolio.png"
+                  alt="Taxfolio"
+                  width={140}
+                  height={35}
+                  className="h-8 w-auto brightness-0 invert"
+                />
+              </Link>
               <p className="text-gray-400 text-sm">Self-assessment, sorted by AI.</p>
             </div>
             {/* Product */}
