@@ -210,10 +210,9 @@ export default function AlternateHomePage() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight tracking-tight" style={{ fontFamily: 'var(--font-kanit), sans-serif' }}>
-              Your{" "}
-              <span className="text-[#00e3ec]">Self Assessment</span>
+              Your Self Assessment
               <br />
-              in 15 minutes{" "}
+              in <span className="text-[#00e3ec]">15 minutes</span>{" "}
               <ArrowRight className="inline-block w-8 h-8 md:w-10 md:h-10 text-[#00e3ec] stroke-[3]" />
             </h1>
 
