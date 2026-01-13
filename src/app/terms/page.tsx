@@ -9,40 +9,40 @@ export const metadata: Metadata = {
 export default function TermsOfServicePage() {
   return (
     <LegalLayout title="Terms of Service" lastUpdated="30 December 2024">
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">1. Introduction</h2>
-        <p className="text-zinc-300 mb-4">
+      <section>
+        <h2>1. Introduction</h2>
+        <p>
           Welcome to TaxFolio. These Terms of Service (&quot;Terms&quot;) govern your access to and use of TaxFolio&apos;s website, applications, and services (collectively, the &quot;Service&quot;).
         </p>
-        <p className="text-zinc-300 mb-4">
+        <p>
           By creating an account or using our Service, you agree to be bound by these Terms. If you do not agree to these Terms, you may not use the Service.
         </p>
-        <p className="text-zinc-300">
+        <p>
           TaxFolio is operated by TaxFolio Ltd, a company registered in England and Wales.
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">2. Service Description</h2>
-        <p className="text-zinc-300 mb-4">
+      <section>
+        <h2>2. Service Description</h2>
+        <p>
           TaxFolio provides an AI-powered platform to help UK freelancers and self-employed individuals:
         </p>
-        <ul className="list-disc list-inside text-zinc-300 space-y-2 mb-4">
+        <ul>
           <li>Connect bank accounts via Open Banking to import transactions</li>
           <li>Automatically categorise transactions for tax purposes using artificial intelligence</li>
           <li>Track income and expenses</li>
           <li>Generate tax summaries and reports</li>
           <li>Prepare for HMRC Self Assessment submissions</li>
         </ul>
-        <p className="text-zinc-300 font-semibold">
-          Important: TaxFolio is a tax preparation tool, not a tax advisory service. We do not provide tax, legal, or financial advice. You are responsible for the accuracy of your tax returns and should consult a qualified tax professional for advice specific to your circumstances.
+        <p>
+          <strong>Important: TaxFolio is a tax preparation tool, not a tax advisory service. We do not provide tax, legal, or financial advice. You are responsible for the accuracy of your tax returns and should consult a qualified tax professional for advice specific to your circumstances.</strong>
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">3. Eligibility</h2>
-        <p className="text-zinc-300 mb-4">To use TaxFolio, you must:</p>
-        <ul className="list-disc list-inside text-zinc-300 space-y-2">
+      <section>
+        <h2>3. Eligibility</h2>
+        <p>To use TaxFolio, you must:</p>
+        <ul>
           <li>Be at least 18 years of age</li>
           <li>Be a UK tax resident or have UK tax obligations</li>
           <li>Have the legal capacity to enter into binding contracts</li>
@@ -50,70 +50,70 @@ export default function TermsOfServicePage() {
         </ul>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">4. Account Registration and Security</h2>
-        <p className="text-zinc-300 mb-4">
+      <section>
+        <h2>4. Account Registration and Security</h2>
+        <p>
           You must create an account to use TaxFolio. When creating an account, you agree to:
         </p>
-        <ul className="list-disc list-inside text-zinc-300 space-y-2 mb-4">
+        <ul>
           <li>Provide accurate, current, and complete information</li>
           <li>Maintain and update your information as needed</li>
           <li>Keep your password secure and confidential</li>
           <li>Notify us immediately of any unauthorised access to your account</li>
           <li>Accept responsibility for all activities under your account</li>
         </ul>
-        <p className="text-zinc-300">
+        <p>
           We reserve the right to suspend or terminate accounts that violate these Terms or contain inaccurate information.
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">5. Open Banking and Plaid</h2>
-        <p className="text-zinc-300 mb-4">
+      <section>
+        <h2>5. Open Banking and Plaid</h2>
+        <p>
           TaxFolio uses Plaid Inc. to connect to your bank accounts via Open Banking. By using this feature, you:
         </p>
-        <ul className="list-disc list-inside text-zinc-300 space-y-2 mb-4">
+        <ul>
           <li>Authorise Plaid to access your bank account information on your behalf</li>
           <li>Acknowledge that Plaid&apos;s services are subject to Plaid&apos;s own terms and privacy policy</li>
           <li>Understand that we receive transaction and account data, not your bank login credentials</li>
           <li>Can revoke access at any time through your TaxFolio settings or directly with your bank</li>
         </ul>
-        <p className="text-zinc-300">
+        <p>
           We are not responsible for the availability or accuracy of data provided through Plaid or any issues with Plaid&apos;s services.
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">6. Subscription and Payments</h2>
+      <section>
+        <h2>6. Subscription and Payments</h2>
 
-        <h3 className="text-lg font-medium text-white mb-3 mt-6">6.1 Free and Paid Plans</h3>
-        <p className="text-zinc-300 mb-4">
+        <h3>6.1 Free and Paid Plans</h3>
+        <p>
           TaxFolio offers both free and paid subscription plans. Features available depend on your subscription tier. Details of pricing and features are available on our website.
         </p>
 
-        <h3 className="text-lg font-medium text-white mb-3 mt-6">6.2 Payment Processing</h3>
-        <p className="text-zinc-300 mb-4">
+        <h3>6.2 Payment Processing</h3>
+        <p>
           Payments are processed securely through Stripe. By subscribing to a paid plan, you authorise us to charge your payment method for the subscription fees. You agree to Stripe&apos;s terms of service for payment processing.
         </p>
 
-        <h3 className="text-lg font-medium text-white mb-3 mt-6">6.3 Billing</h3>
-        <ul className="list-disc list-inside text-zinc-300 space-y-2 mb-4">
+        <h3>6.3 Billing</h3>
+        <ul>
           <li>Subscriptions are billed in advance on a monthly or annual basis</li>
           <li>Prices are in GBP and include VAT where applicable</li>
           <li>Subscriptions automatically renew unless cancelled before the renewal date</li>
           <li>We may change prices with 30 days&apos; notice</li>
         </ul>
 
-        <h3 className="text-lg font-medium text-white mb-3 mt-6">6.4 Refunds</h3>
-        <p className="text-zinc-300">
+        <h3>6.4 Refunds</h3>
+        <p>
           Annual subscriptions may be refunded within 14 days of purchase if you have not substantially used the Service. Monthly subscriptions are non-refundable. Contact support@taxfolio.uk for refund requests.
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">7. Acceptable Use</h2>
-        <p className="text-zinc-300 mb-4">You agree not to:</p>
-        <ul className="list-disc list-inside text-zinc-300 space-y-2">
+      <section>
+        <h2>7. Acceptable Use</h2>
+        <p>You agree not to:</p>
+        <ul>
           <li>Use the Service for any unlawful purpose or in violation of any laws</li>
           <li>Submit false, misleading, or fraudulent information</li>
           <li>Attempt to gain unauthorised access to our systems or other users&apos; accounts</li>
@@ -126,22 +126,22 @@ export default function TermsOfServicePage() {
         </ul>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">8. Intellectual Property</h2>
-        <p className="text-zinc-300 mb-4">
+      <section>
+        <h2>8. Intellectual Property</h2>
+        <p>
           The Service, including its design, features, content, and underlying technology, is owned by TaxFolio and protected by intellectual property laws. You are granted a limited, non-exclusive, non-transferable licence to use the Service for its intended purpose.
         </p>
-        <p className="text-zinc-300">
+        <p>
           You retain ownership of your data. By using the Service, you grant us a licence to use your data as necessary to provide and improve the Service, subject to our Privacy Policy.
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">9. AI-Generated Content</h2>
-        <p className="text-zinc-300 mb-4">
+      <section>
+        <h2>9. AI-Generated Content</h2>
+        <p>
           TaxFolio uses artificial intelligence to categorise transactions and generate tax-related insights. You acknowledge that:
         </p>
-        <ul className="list-disc list-inside text-zinc-300 space-y-2">
+        <ul>
           <li>AI categorisations are suggestions and may not always be accurate</li>
           <li>You are responsible for reviewing and verifying all categorisations</li>
           <li>AI-generated content does not constitute tax advice</li>
@@ -150,84 +150,84 @@ export default function TermsOfServicePage() {
         </ul>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">10. Disclaimer of Warranties</h2>
-        <p className="text-zinc-300 mb-4">
+      <section>
+        <h2>10. Disclaimer of Warranties</h2>
+        <p>
           THE SERVICE IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
         </p>
-        <ul className="list-disc list-inside text-zinc-300 space-y-2 mb-4">
+        <ul>
           <li>MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE</li>
           <li>ACCURACY, RELIABILITY, OR COMPLETENESS OF CONTENT</li>
           <li>UNINTERRUPTED OR ERROR-FREE OPERATION</li>
           <li>SECURITY OR FREEDOM FROM VIRUSES</li>
         </ul>
-        <p className="text-zinc-300">
+        <p>
           We do not warrant that the Service will meet your specific requirements or that any errors will be corrected.
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">11. Limitation of Liability</h2>
-        <p className="text-zinc-300 mb-4">
+      <section>
+        <h2>11. Limitation of Liability</h2>
+        <p>
           TO THE MAXIMUM EXTENT PERMITTED BY LAW:
         </p>
-        <ul className="list-disc list-inside text-zinc-300 space-y-2 mb-4">
+        <ul>
           <li>TAXFOLIO SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES</li>
           <li>OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID US IN THE 12 MONTHS PRECEDING THE CLAIM</li>
           <li>WE ARE NOT LIABLE FOR ANY TAX PENALTIES, INTEREST, OR ADDITIONAL TAX OWED TO HMRC</li>
           <li>WE ARE NOT RESPONSIBLE FOR DECISIONS MADE BASED ON SERVICE OUTPUT</li>
         </ul>
-        <p className="text-zinc-300">
+        <p>
           Nothing in these Terms excludes or limits our liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be excluded by law.
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">12. Indemnification</h2>
-        <p className="text-zinc-300">
+      <section>
+        <h2>12. Indemnification</h2>
+        <p>
           You agree to indemnify and hold harmless TaxFolio, its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the Service, violation of these Terms, or infringement of any third-party rights.
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">13. Termination</h2>
-        <p className="text-zinc-300 mb-4">
+      <section>
+        <h2>13. Termination</h2>
+        <p>
           You may cancel your account at any time through your account settings or by contacting support.
         </p>
-        <p className="text-zinc-300 mb-4">
+        <p>
           We may suspend or terminate your account if you:
         </p>
-        <ul className="list-disc list-inside text-zinc-300 space-y-2 mb-4">
+        <ul>
           <li>Violate these Terms</li>
           <li>Engage in fraudulent or illegal activity</li>
           <li>Fail to pay subscription fees</li>
           <li>Provide false information</li>
         </ul>
-        <p className="text-zinc-300">
+        <p>
           Upon termination, you may request export of your data within 30 days. After this period, we may delete your data in accordance with our Privacy Policy and legal retention requirements.
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">14. Changes to Terms</h2>
-        <p className="text-zinc-300">
+      <section>
+        <h2>14. Changes to Terms</h2>
+        <p>
           We may modify these Terms at any time. Material changes will be notified via email or prominent notice on the Service at least 30 days before taking effect. Your continued use after changes take effect constitutes acceptance of the new Terms. If you do not agree to the changes, you must stop using the Service.
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">15. Governing Law and Disputes</h2>
-        <p className="text-zinc-300 mb-4">
+      <section>
+        <h2>15. Governing Law and Disputes</h2>
+        <p>
           These Terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.
         </p>
-        <p className="text-zinc-300">
+        <p>
           For EU consumers: You may also be entitled to bring proceedings in your country of residence and benefit from mandatory consumer protection provisions of your local law.
         </p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">16. General Provisions</h2>
-        <ul className="list-disc list-inside text-zinc-300 space-y-2">
+      <section>
+        <h2>16. General Provisions</h2>
+        <ul>
           <li><strong>Entire Agreement:</strong> These Terms, together with our Privacy Policy and Cookie Policy, constitute the entire agreement between you and TaxFolio.</li>
           <li><strong>Severability:</strong> If any provision is found unenforceable, the remaining provisions remain in effect.</li>
           <li><strong>Waiver:</strong> Failure to enforce any right does not constitute a waiver of that right.</li>
@@ -236,15 +236,15 @@ export default function TermsOfServicePage() {
         </ul>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">17. Contact Us</h2>
-        <p className="text-zinc-300 mb-4">
+      <section>
+        <h2>17. Contact Us</h2>
+        <p>
           For questions about these Terms, please contact us:
         </p>
-        <p className="text-zinc-300 mb-2">
+        <p>
           Email: legal@taxfolio.uk
         </p>
-        <p className="text-zinc-300">
+        <p>
           Support: support@taxfolio.uk
         </p>
       </section>

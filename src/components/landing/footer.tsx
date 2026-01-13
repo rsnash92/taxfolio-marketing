@@ -9,8 +9,8 @@ const footerLinks = {
     { label: "Sign Up", href: "https://app.taxfolio.io/signup" },
   ],
   resources: [
-    { label: "Help Centre", href: "#" },
-    { label: "MTD Guide", href: "#" },
+    { label: "Tax Guides", href: "/resources" },
+    { label: "MTD Guide", href: "/making-tax-digital" },
     { label: "Affiliates", href: "/affiliates" },
     { label: "For Accountants", href: "/accountants" },
   ],

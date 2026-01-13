@@ -10,23 +10,23 @@ export const metadata: Metadata = {
 
 export default function AccountantsPage() {
   return (
-    <div className="min-h-screen bg-zinc-950">
+    <div className="min-h-screen bg-[#f8f9fc]">
       {/* Header */}
-      <header className="border-b border-zinc-800/50 bg-zinc-950/80 backdrop-blur-lg sticky top-0 z-50">
-        <div className="container mx-auto px-4">
+      <header className="border-b border-gray-100 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container mx-auto px-6 lg:px-12">
           <div className="flex h-16 items-center justify-between">
             <Link href="/">
               <Image
-                src="/logo.webp"
+                src="/taxfolio.png"
                 alt="TaxFolio"
                 width={140}
-                height={32}
+                height={35}
                 className="h-8 w-auto"
               />
             </Link>
             <Link
               href="/"
-              className="text-sm text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
+              className="text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
@@ -35,22 +35,22 @@ export default function AccountantsPage() {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-16 max-w-5xl">
+      <main className="container mx-auto px-6 lg:px-12 py-16 max-w-5xl">
         {/* Hero */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#15e49e]/10 border border-[#15e49e]/20 text-[#15e49e] text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00e3ec]/10 border border-[#00e3ec]/20 text-[#00a8b0] text-sm font-medium mb-6">
             <Building2 className="w-4 h-4" />
             Accountant Partner Program
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Help Your Clients.<br />Earn 60% Commission.
           </h1>
-          <p className="text-xl text-zinc-400 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
             Partner with TaxFolio to help your freelance and landlord clients stay organised.
             Earn higher commissions with our exclusive accountant program.
           </p>
           <a href="https://app.taxfolio.io/signup">
-            <button className="btn-brand text-lg px-8 py-3">
+            <button className="bg-gradient-to-r from-[#0f172a] to-[#1e293b] text-white font-semibold rounded-full px-8 py-3 text-lg hover:opacity-90 transition-opacity">
               Apply as Accountant Partner
             </button>
           </a>
@@ -58,74 +58,74 @@ export default function AccountantsPage() {
 
         {/* Stats */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
-          <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6 text-center">
-            <div className="w-12 h-12 bg-[#15e49e]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <PoundSterling className="w-6 h-6 text-[#15e49e]" />
+          <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm">
+            <div className="w-12 h-12 bg-[#00e3ec]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <PoundSterling className="w-6 h-6 text-[#00a8b0]" />
             </div>
-            <div className="text-3xl font-bold text-white mb-1">60%</div>
-            <div className="text-zinc-400 text-sm">Commission Rate</div>
-            <div className="text-[#15e49e] text-xs mt-1">35% more than affiliates</div>
+            <div className="text-3xl font-bold text-gray-900 mb-1">60%</div>
+            <div className="text-gray-600 text-sm">Commission Rate</div>
+            <div className="text-[#00a8b0] text-xs mt-1">35% more than affiliates</div>
           </div>
-          <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6 text-center">
-            <div className="w-12 h-12 bg-[#15e49e]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Award className="w-6 h-6 text-[#15e49e]" />
+          <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm">
+            <div className="w-12 h-12 bg-[#00e3ec]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Award className="w-6 h-6 text-[#00a8b0]" />
             </div>
-            <div className="text-3xl font-bold text-white mb-1">Verified</div>
-            <div className="text-zinc-400 text-sm">Partner Badge</div>
-            <div className="text-[#15e49e] text-xs mt-1">Display on your website</div>
+            <div className="text-3xl font-bold text-gray-900 mb-1">Verified</div>
+            <div className="text-gray-600 text-sm">Partner Badge</div>
+            <div className="text-[#00a8b0] text-xs mt-1">Display on your website</div>
           </div>
-          <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6 text-center">
-            <div className="w-12 h-12 bg-[#15e49e]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <HeartHandshake className="w-6 h-6 text-[#15e49e]" />
+          <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm">
+            <div className="w-12 h-12 bg-[#00e3ec]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <HeartHandshake className="w-6 h-6 text-[#00a8b0]" />
             </div>
-            <div className="text-3xl font-bold text-white mb-1">Priority</div>
-            <div className="text-zinc-400 text-sm">Client Support</div>
-            <div className="text-[#15e49e] text-xs mt-1">Dedicated support line</div>
+            <div className="text-3xl font-bold text-gray-900 mb-1">Priority</div>
+            <div className="text-gray-600 text-sm">Client Support</div>
+            <div className="text-[#00a8b0] text-xs mt-1">Dedicated support line</div>
           </div>
         </div>
 
         {/* Why Partner */}
-        <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-8 mb-16">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 mb-16 shadow-sm">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
             Why Accountants Love TaxFolio
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="font-semibold text-white mb-3 flex items-center gap-2">
-                <Check className="w-5 h-5 text-[#15e49e]" />
+              <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <Check className="w-5 h-5 text-[#00a8b0]" />
                 Clients Come Prepared
               </h3>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 No more chasing receipts or decoding bank statements. Your clients arrive
                 with organised, categorised transactions ready for year-end.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-3 flex items-center gap-2">
-                <Check className="w-5 h-5 text-[#15e49e]" />
+              <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <Check className="w-5 h-5 text-[#00a8b0]" />
                 MTD Ready
               </h3>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 TaxFolio helps clients track quarterly submissions. They&apos;ll be
                 Making Tax Digital compliant without extra work from you.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-3 flex items-center gap-2">
-                <Check className="w-5 h-5 text-[#15e49e]" />
+              <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <Check className="w-5 h-5 text-[#00a8b0]" />
                 Reduce Admin Time
               </h3>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 Spend less time on data entry and more on advisory work.
                 TaxFolio handles the bookkeeping basics automatically.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-3 flex items-center gap-2">
-                <Check className="w-5 h-5 text-[#15e49e]" />
+              <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <Check className="w-5 h-5 text-[#00a8b0]" />
                 Add Revenue Stream
               </h3>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 Earn 60% commission on every client subscription. Turn recommendations
                 into recurring revenue for your practice.
               </p>
@@ -135,43 +135,43 @@ export default function AccountantsPage() {
 
         {/* How It Works */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white text-center mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
             How the Accountant Program Works
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="w-10 h-10 rounded-full bg-[#15e49e] text-black font-bold flex items-center justify-center mx-auto mb-4">
+              <div className="w-10 h-10 rounded-full bg-[#00e3ec] text-gray-900 font-bold flex items-center justify-center mx-auto mb-4">
                 1
               </div>
-              <h3 className="font-semibold text-white mb-2">Apply</h3>
-              <p className="text-zinc-400 text-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Apply</h3>
+              <p className="text-gray-600 text-sm">
                 Submit your details including your accounting body registration.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-10 h-10 rounded-full bg-[#15e49e] text-black font-bold flex items-center justify-center mx-auto mb-4">
+              <div className="w-10 h-10 rounded-full bg-[#00e3ec] text-gray-900 font-bold flex items-center justify-center mx-auto mb-4">
                 2
               </div>
-              <h3 className="font-semibold text-white mb-2">Get Verified</h3>
-              <p className="text-zinc-400 text-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Get Verified</h3>
+              <p className="text-gray-600 text-sm">
                 We verify your credentials and approve your account within 48 hours.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-10 h-10 rounded-full bg-[#15e49e] text-black font-bold flex items-center justify-center mx-auto mb-4">
+              <div className="w-10 h-10 rounded-full bg-[#00e3ec] text-gray-900 font-bold flex items-center justify-center mx-auto mb-4">
                 3
               </div>
-              <h3 className="font-semibold text-white mb-2">Refer Clients</h3>
-              <p className="text-zinc-400 text-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Refer Clients</h3>
+              <p className="text-gray-600 text-sm">
                 Share your unique link with clients or add our partner badge to your site.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-10 h-10 rounded-full bg-[#15e49e] text-black font-bold flex items-center justify-center mx-auto mb-4">
+              <div className="w-10 h-10 rounded-full bg-[#00e3ec] text-gray-900 font-bold flex items-center justify-center mx-auto mb-4">
                 4
               </div>
-              <h3 className="font-semibold text-white mb-2">Earn Monthly</h3>
-              <p className="text-zinc-400 text-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Earn Monthly</h3>
+              <p className="text-gray-600 text-sm">
                 Receive 60% of every payment, paid monthly via bank transfer.
               </p>
             </div>
@@ -180,54 +180,54 @@ export default function AccountantsPage() {
 
         {/* Exclusive Benefits */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white text-center mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
             Exclusive Accountant Benefits
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-[#15e49e]/10 rounded-lg flex items-center justify-center">
-                  <PoundSterling className="w-5 h-5 text-[#15e49e]" />
+                <div className="w-10 h-10 bg-[#00e3ec]/10 rounded-lg flex items-center justify-center">
+                  <PoundSterling className="w-5 h-5 text-[#00a8b0]" />
                 </div>
-                <h3 className="font-semibold text-white">Higher Commission</h3>
+                <h3 className="font-semibold text-gray-900">Higher Commission</h3>
               </div>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 Earn 60% vs 25% standard affiliate rate. Your professional recommendation
                 is worth more.
               </p>
             </div>
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-[#15e49e]/10 rounded-lg flex items-center justify-center">
-                  <Award className="w-5 h-5 text-[#15e49e]" />
+                <div className="w-10 h-10 bg-[#00e3ec]/10 rounded-lg flex items-center justify-center">
+                  <Award className="w-5 h-5 text-[#00a8b0]" />
                 </div>
-                <h3 className="font-semibold text-white">Verified Partner Badge</h3>
+                <h3 className="font-semibold text-gray-900">Verified Partner Badge</h3>
               </div>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 Display the &quot;TaxFolio Verified Partner&quot; badge on your website
                 to build trust with potential clients.
               </p>
             </div>
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-[#15e49e]/10 rounded-lg flex items-center justify-center">
-                  <Users className="w-5 h-5 text-[#15e49e]" />
+                <div className="w-10 h-10 bg-[#00e3ec]/10 rounded-lg flex items-center justify-center">
+                  <Users className="w-5 h-5 text-[#00a8b0]" />
                 </div>
-                <h3 className="font-semibold text-white">Client Dashboard Access</h3>
+                <h3 className="font-semibold text-gray-900">Client Dashboard Access</h3>
               </div>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 View your referred clients in one place. See their status without
                 accessing their accounts.
               </p>
             </div>
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-[#15e49e]/10 rounded-lg flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-[#15e49e]" />
+                <div className="w-10 h-10 bg-[#00e3ec]/10 rounded-lg flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-[#00a8b0]" />
                 </div>
-                <h3 className="font-semibold text-white">Priority Support</h3>
+                <h3 className="font-semibold text-gray-900">Priority Support</h3>
               </div>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 Direct line to our support team for you and your clients.
                 Issues resolved within 24 hours.
               </p>
@@ -237,62 +237,62 @@ export default function AccountantsPage() {
 
         {/* Supported Bodies */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
             We Welcome Partners From
           </h2>
-          <p className="text-zinc-400 mb-8">
+          <p className="text-gray-600 mb-8">
             Members of recognised UK accounting bodies are eligible for the accountant program.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <span className="px-4 py-2 rounded-full bg-zinc-800 text-zinc-300">ICAEW</span>
-            <span className="px-4 py-2 rounded-full bg-zinc-800 text-zinc-300">ACCA</span>
-            <span className="px-4 py-2 rounded-full bg-zinc-800 text-zinc-300">CIMA</span>
-            <span className="px-4 py-2 rounded-full bg-zinc-800 text-zinc-300">AAT</span>
-            <span className="px-4 py-2 rounded-full bg-zinc-800 text-zinc-300">ICAS</span>
-            <span className="px-4 py-2 rounded-full bg-zinc-800 text-zinc-300">CIPFA</span>
-            <span className="px-4 py-2 rounded-full bg-zinc-800 text-zinc-300">ICB</span>
-            <span className="px-4 py-2 rounded-full bg-zinc-800 text-zinc-300">IAB</span>
+            <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">ICAEW</span>
+            <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">ACCA</span>
+            <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">CIMA</span>
+            <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">AAT</span>
+            <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">ICAS</span>
+            <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">CIPFA</span>
+            <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">ICB</span>
+            <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">IAB</span>
           </div>
         </div>
 
         {/* Earnings Example */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Potential Earnings
           </h2>
-          <p className="text-zinc-400 mb-8 max-w-xl mx-auto">
+          <p className="text-gray-600 mb-8 max-w-xl mx-auto">
             With 60% commission on TaxFolio Pro (£129.99/year), here&apos;s what you could earn:
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
-              <div className="text-zinc-400 text-sm mb-2">10 Clients</div>
-              <div className="text-2xl font-bold text-[#15e49e]">£780/year</div>
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div className="text-gray-600 text-sm mb-2">10 Clients</div>
+              <div className="text-2xl font-bold text-[#00a8b0]">£780/year</div>
             </div>
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
-              <div className="text-zinc-400 text-sm mb-2">25 Clients</div>
-              <div className="text-2xl font-bold text-[#15e49e]">£1,950/year</div>
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div className="text-gray-600 text-sm mb-2">25 Clients</div>
+              <div className="text-2xl font-bold text-[#00a8b0]">£1,950/year</div>
             </div>
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
-              <div className="text-zinc-400 text-sm mb-2">50 Clients</div>
-              <div className="text-2xl font-bold text-[#15e49e]">£3,900/year</div>
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div className="text-gray-600 text-sm mb-2">50 Clients</div>
+              <div className="text-2xl font-bold text-[#00a8b0]">£3,900/year</div>
             </div>
           </div>
-          <p className="text-zinc-500 text-sm mt-4">
+          <p className="text-gray-500 text-sm mt-4">
             * Based on Pro plan annual subscriptions. Commission is recurring as long as clients stay subscribed.
           </p>
         </div>
 
         {/* CTA */}
-        <div className="text-center rounded-xl border border-[#15e49e]/30 bg-[#15e49e]/5 p-8">
-          <h2 className="text-2xl font-bold text-white mb-4">
+        <div className="text-center rounded-2xl border border-[#00e3ec]/30 bg-[#00e3ec]/5 p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Join the Accountant Partner Program
           </h2>
-          <p className="text-zinc-400 mb-6 max-w-lg mx-auto">
+          <p className="text-gray-600 mb-6 max-w-lg mx-auto">
             Help your clients stay organised while building a new revenue stream for your practice.
             Apply today - verification takes just 48 hours.
           </p>
           <a href="https://app.taxfolio.io/signup">
-            <button className="btn-brand text-lg px-8 py-3">
+            <button className="bg-gradient-to-r from-[#0f172a] to-[#1e293b] text-white font-semibold rounded-full px-8 py-3 text-lg hover:opacity-90 transition-opacity">
               Apply as Accountant Partner
             </button>
           </a>
@@ -300,13 +300,22 @@ export default function AccountantsPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-zinc-800/50 py-8 mt-16">
-        <div className="container mx-auto px-4">
+      <footer className="bg-slate-900 text-white py-12 mt-16">
+        <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-zinc-500 text-sm">
-              © {new Date().getFullYear()} TaxFolio. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6 text-sm text-zinc-500">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/taxfolio.png"
+                alt="TaxFolio"
+                width={140}
+                height={35}
+                className="h-8 w-auto brightness-0 invert"
+              />
+              <p className="text-gray-400 text-sm">
+                © {new Date().getFullYear()} TaxFolio. All rights reserved.
+              </p>
+            </div>
+            <div className="flex items-center gap-6 text-sm text-gray-400">
               <Link href="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
