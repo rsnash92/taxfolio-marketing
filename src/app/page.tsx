@@ -35,7 +35,11 @@ import {
   Bike,
   FileX,
   CalendarClock,
-  PoundSterling
+  PoundSterling,
+  BookOpen,
+  FileText,
+  Receipt,
+  Users
 } from "lucide-react"
 
 // Bank Connection Animation Component
@@ -1057,6 +1061,106 @@ export default function AlternateHomePage() {
         </div>
       </section>
 
+      {/* Resources Section */}
+      <section className="bg-white py-20 border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Tax Guides & Resources
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Free guides to help you understand UK tax, stay compliant with Making Tax Digital, and maximise your deductions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {/* Making Tax Digital */}
+            <Link href="/making-tax-digital" className="group">
+              <div className="bg-[#f8f9fc] rounded-2xl p-6 border border-gray-100 hover:border-[#00e3ec] hover:shadow-lg transition-all h-full">
+                <div className="w-12 h-12 bg-[#00e3ec]/10 rounded-xl flex items-center justify-center mb-4">
+                  <FileSpreadsheet className="w-6 h-6 text-[#00a8b0]" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#00a8b0] transition-colors">Making Tax Digital</h3>
+                <p className="text-gray-600 text-sm mb-3">Everything you need to know about MTD for Income Tax, deadlines, and compliance.</p>
+                <span className="text-[#00a8b0] text-sm font-medium flex items-center gap-1">
+                  Read guide <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </Link>
+
+            {/* Self Assessment */}
+            <Link href="/self-assessment" className="group">
+              <div className="bg-[#f8f9fc] rounded-2xl p-6 border border-gray-100 hover:border-[#00e3ec] hover:shadow-lg transition-all h-full">
+                <div className="w-12 h-12 bg-[#00e3ec]/10 rounded-xl flex items-center justify-center mb-4">
+                  <FileText className="w-6 h-6 text-[#00a8b0]" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#00a8b0] transition-colors">Self Assessment</h3>
+                <p className="text-gray-600 text-sm mb-3">Complete guide to UK tax returns - who needs to file, deadlines, and how to submit.</p>
+                <span className="text-[#00a8b0] text-sm font-medium flex items-center gap-1">
+                  Read guide <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </Link>
+
+            {/* Sole Trader Tax */}
+            <Link href="/sole-trader-tax" className="group">
+              <div className="bg-[#f8f9fc] rounded-2xl p-6 border border-gray-100 hover:border-[#00e3ec] hover:shadow-lg transition-all h-full">
+                <div className="w-12 h-12 bg-[#00e3ec]/10 rounded-xl flex items-center justify-center mb-4">
+                  <Users className="w-6 h-6 text-[#00a8b0]" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#00a8b0] transition-colors">Sole Trader Tax</h3>
+                <p className="text-gray-600 text-sm mb-3">Tax rates, National Insurance, and what self-employed people need to know.</p>
+                <span className="text-[#00a8b0] text-sm font-medium flex items-center gap-1">
+                  Read guide <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </Link>
+
+            {/* Landlord Tax */}
+            <Link href="/landlord-tax" className="group">
+              <div className="bg-[#f8f9fc] rounded-2xl p-6 border border-gray-100 hover:border-[#00e3ec] hover:shadow-lg transition-all h-full">
+                <div className="w-12 h-12 bg-[#00e3ec]/10 rounded-xl flex items-center justify-center mb-4">
+                  <Home className="w-6 h-6 text-[#00a8b0]" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#00a8b0] transition-colors">Landlord Tax</h3>
+                <p className="text-gray-600 text-sm mb-3">Property income tax, allowable expenses, and mortgage interest relief explained.</p>
+                <span className="text-[#00a8b0] text-sm font-medium flex items-center gap-1">
+                  Read guide <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </Link>
+
+            {/* Tax Deductions */}
+            <Link href="/tax-deductions" className="group">
+              <div className="bg-[#f8f9fc] rounded-2xl p-6 border border-gray-100 hover:border-[#00e3ec] hover:shadow-lg transition-all h-full">
+                <div className="w-12 h-12 bg-[#00e3ec]/10 rounded-xl flex items-center justify-center mb-4">
+                  <Receipt className="w-6 h-6 text-[#00a8b0]" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#00a8b0] transition-colors">Tax Deductions</h3>
+                <p className="text-gray-600 text-sm mb-3">Maximise your tax savings with our complete guide to allowable expenses.</p>
+                <span className="text-[#00a8b0] text-sm font-medium flex items-center gap-1">
+                  Read guide <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </Link>
+
+            {/* All Resources */}
+            <Link href="/resources" className="group">
+              <div className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] rounded-2xl p-6 hover:shadow-lg transition-all h-full">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4">
+                  <BookOpen className="w-6 h-6 text-[#00e3ec]" />
+                </div>
+                <h3 className="font-semibold text-white mb-2">All Resources</h3>
+                <p className="text-gray-300 text-sm mb-3">Browse our complete library of tax guides, tutorials, and helpful articles.</p>
+                <span className="text-[#00e3ec] text-sm font-medium flex items-center gap-1">
+                  View all <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="faq" className="bg-[#f8f9fc] py-20">
         <div className="container mx-auto px-6 lg:px-12">
@@ -1191,10 +1295,10 @@ export default function AlternateHomePage() {
             <div>
               <h4 className="font-semibold text-white mb-4">Resources</h4>
               <ul className="space-y-2 text-sm">
-                <li><Link href="#faq" className="text-gray-400 hover:text-white transition-colors">Help Centre</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">MTD Guide</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Affiliates</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">For Accountants</Link></li>
+                <li><Link href="/resources" className="text-gray-400 hover:text-white transition-colors">All Guides</Link></li>
+                <li><Link href="/making-tax-digital" className="text-gray-400 hover:text-white transition-colors">MTD Guide</Link></li>
+                <li><Link href="/affiliates" className="text-gray-400 hover:text-white transition-colors">Affiliates</Link></li>
+                <li><Link href="/accountants" className="text-gray-400 hover:text-white transition-colors">For Accountants</Link></li>
               </ul>
             </div>
             {/* Legal */}
