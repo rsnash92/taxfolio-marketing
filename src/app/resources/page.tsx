@@ -76,11 +76,11 @@ export default function ResourcesPage() {
               <Link href="/#features" className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
                 Features
               </Link>
-              <Link href="/resources" className="text-[#00a8b0] font-medium text-sm">
-                Resources
-              </Link>
               <Link href="/#pricing" className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
                 Pricing
+              </Link>
+              <Link href="/resources" className="text-[#00a8b0] font-medium text-sm">
+                Resources
               </Link>
               <Link href="/#faq" className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
                 FAQ
