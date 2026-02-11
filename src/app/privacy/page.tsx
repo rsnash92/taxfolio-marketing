@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalLayout title="Privacy Policy" lastUpdated="30 December 2024">
+    <LegalLayout title="Privacy Policy" lastUpdated="10 February 2025">
       <section>
         <h2>1. Introduction</h2>
         <p>
@@ -64,7 +64,35 @@ export default function PrivacyPolicyPage() {
           <li>Transaction history with TaxFolio</li>
         </ul>
 
-        <h3>3.4 Automatically Collected Information</h3>
+        <h3>3.4 HMRC Making Tax Digital (MTD) Data</h3>
+        <p>
+          When you connect TaxFolio to HMRC via Making Tax Digital, we collect and process:
+        </p>
+        <ul>
+          <li>Your National Insurance number (NINO) for HMRC API identification</li>
+          <li>HMRC OAuth access and refresh tokens (encrypted at rest)</li>
+          <li>Filing obligation data, business details, and ITSA status from HMRC</li>
+          <li>Tax calculation results and submission confirmations</li>
+        </ul>
+
+        <h3>3.5 Fraud Prevention Data (HMRC Requirement)</h3>
+        <p>
+          HMRC legally requires all Making Tax Digital software to collect and transmit fraud prevention data with every API request. This data helps HMRC protect against fraud and is collected automatically when you use MTD features:
+        </p>
+        <ul>
+          <li>Your public IP address and the timestamp it was collected</li>
+          <li>Browser user agent string (browser name, version, and operating system)</li>
+          <li>Screen resolution, window size, colour depth, and scaling factor</li>
+          <li>Browser timezone</li>
+          <li>Installed browser plugins</li>
+          <li>A device identifier (stored in your browser&apos;s local storage)</li>
+          <li>Your TaxFolio user ID (as a vendor-specific user identifier)</li>
+        </ul>
+        <p>
+          This data is transmitted directly to HMRC as HTTP headers on each MTD API call. We do not use this data for any other purpose. Full details of HMRC&apos;s fraud prevention requirements are available on the HMRC Developer Hub.
+        </p>
+
+        <h3>3.6 Automatically Collected Information</h3>
         <ul>
           <li>Device information (browser type, operating system)</li>
           <li>IP address and approximate location</li>
@@ -102,7 +130,17 @@ export default function PrivacyPolicyPage() {
           <li>Notify you of changes to our services or policies</li>
         </ul>
 
-        <h3>4.4 For Legal and Security Purposes (Legal Basis: Legal Obligation/Legitimate Interest)</h3>
+        <h3>4.4 To Submit Data to HMRC (Legal Basis: Contract/Legal Obligation)</h3>
+        <ul>
+          <li>Submit quarterly income and expense updates to HMRC via Making Tax Digital APIs</li>
+          <li>Retrieve your filing obligations, tax calculations, and account balance from HMRC</li>
+          <li>Transmit fraud prevention headers as legally required by HMRC with every API request</li>
+        </ul>
+        <p>
+          When you authorise TaxFolio to connect to HMRC, your tax data (income, expenses, and period summaries) is transmitted to HMRC on your behalf. Fraud prevention data (described in section 3.5) is sent automatically as required by law.
+        </p>
+
+        <h3>4.5 For Legal and Security Purposes (Legal Basis: Legal Obligation/Legitimate Interest)</h3>
         <ul>
           <li>Comply with legal obligations</li>
           <li>Prevent fraud and abuse</li>
@@ -115,7 +153,19 @@ export default function PrivacyPolicyPage() {
         <h2>5. Data Sharing and Third Parties</h2>
         <p>We share your data with the following categories of recipients:</p>
 
-        <h3>5.1 Service Providers</h3>
+        <h3>5.1 HM Revenue &amp; Customs (HMRC)</h3>
+        <p>
+          When you use our Making Tax Digital features, we transmit data directly to HMRC on your behalf, including:
+        </p>
+        <ul>
+          <li>Quarterly income and expense summaries for your self-employment or property businesses</li>
+          <li>Fraud prevention data (device information, IP address, browser details) as legally required by HMRC</li>
+        </ul>
+        <p>
+          HMRC is not a service provider — they are a government body to whom we are legally required to transmit data when you use MTD features. HMRC&apos;s handling of your data is governed by HMRC&apos;s own privacy notice.
+        </p>
+
+        <h3>5.2 Service Providers</h3>
         <ul>
           <li><strong>Plaid Inc.</strong> - Open Banking connectivity (processes bank connection data)</li>
           <li><strong>Stripe Inc.</strong> - Payment processing (processes payment data)</li>
@@ -127,12 +177,12 @@ export default function PrivacyPolicyPage() {
           All service providers are bound by data processing agreements and are required to protect your data in accordance with GDPR requirements.
         </p>
 
-        <h3>5.2 Legal Requirements</h3>
+        <h3>5.3 Legal Requirements</h3>
         <p>
           We may disclose your information if required by law, court order, or government request, or if we believe disclosure is necessary to protect our rights, your safety, or the safety of others.
         </p>
 
-        <h3>5.3 Business Transfers</h3>
+        <h3>5.4 Business Transfers</h3>
         <p>
           In the event of a merger, acquisition, or sale of assets, your data may be transferred to the acquiring entity. We will notify you of any such change and your choices regarding your data.
         </p>

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <LegalLayout title="Terms of Service" lastUpdated="30 December 2024">
+    <LegalLayout title="Terms of Service" lastUpdated="10 February 2025">
       <section>
         <h2>1. Introduction</h2>
         <p>
@@ -32,7 +32,8 @@ export default function TermsOfServicePage() {
           <li>Automatically categorise transactions for tax purposes using artificial intelligence</li>
           <li>Track income and expenses</li>
           <li>Generate tax summaries and reports</li>
-          <li>Prepare for HMRC Self Assessment submissions</li>
+          <li>Prepare and submit quarterly updates to HMRC via Making Tax Digital (MTD)</li>
+          <li>View your HMRC tax account balance, charges, and ITSA status</li>
         </ul>
         <p>
           <strong>Important: TaxFolio is a tax preparation tool, not a tax advisory service. We do not provide tax, legal, or financial advice. You are responsible for the accuracy of your tax returns and should consult a qualified tax professional for advice specific to your circumstances.</strong>
@@ -84,19 +85,59 @@ export default function TermsOfServicePage() {
       </section>
 
       <section>
-        <h2>6. Subscription and Payments</h2>
+        <h2>6. HMRC Making Tax Digital (MTD)</h2>
 
-        <h3>6.1 Free and Paid Plans</h3>
+        <h3>6.1 HMRC Authorisation</h3>
+        <p>
+          To use TaxFolio&apos;s MTD features, you must authorise TaxFolio to interact with HMRC on your behalf via HMRC&apos;s OAuth 2.0 process. By doing so, you:
+        </p>
+        <ul>
+          <li>Authorise TaxFolio to submit income and expense data to HMRC on your behalf</li>
+          <li>Authorise TaxFolio to retrieve your filing obligations, tax calculations, and account information from HMRC</li>
+          <li>Acknowledge that submissions made through TaxFolio are legally binding HMRC filings</li>
+          <li>Can revoke access at any time through your TaxFolio settings or your HMRC online account</li>
+        </ul>
+
+        <h3>6.2 Your Responsibilities</h3>
+        <p>
+          When using MTD features, you are responsible for:
+        </p>
+        <ul>
+          <li>Ensuring that all income and expense data submitted to HMRC is accurate and complete</li>
+          <li>Reviewing quarterly submissions before confirming them</li>
+          <li>Meeting HMRC&apos;s quarterly filing deadlines</li>
+          <li>Keeping records to support your submissions as required by HMRC</li>
+          <li>Providing a correct National Insurance number</li>
+        </ul>
+        <p>
+          TaxFolio helps you prepare and submit data but does not verify the accuracy of the underlying information you provide. You remain legally responsible for your tax affairs.
+        </p>
+
+        <h3>6.3 Fraud Prevention Data</h3>
+        <p>
+          HMRC requires all MTD-compatible software to collect and transmit fraud prevention data (such as your IP address, browser information, and device details) with every API request. By using MTD features, you consent to this data being collected and transmitted to HMRC as required by law. Full details are in our Privacy Policy.
+        </p>
+
+        <h3>6.4 HMRC Service Availability</h3>
+        <p>
+          TaxFolio relies on HMRC&apos;s APIs to provide MTD functionality. We are not responsible for HMRC system outages, maintenance periods, or changes to HMRC&apos;s API specifications that may temporarily affect the Service.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Subscription and Payments</h2>
+
+        <h3>7.1 Free and Paid Plans</h3>
         <p>
           TaxFolio offers both free and paid subscription plans. Features available depend on your subscription tier. Details of pricing and features are available on our website.
         </p>
 
-        <h3>6.2 Payment Processing</h3>
+        <h3>7.2 Payment Processing</h3>
         <p>
           Payments are processed securely through Stripe. By subscribing to a paid plan, you authorise us to charge your payment method for the subscription fees. You agree to Stripe&apos;s terms of service for payment processing.
         </p>
 
-        <h3>6.3 Billing</h3>
+        <h3>7.3 Billing</h3>
         <ul>
           <li>Subscriptions are billed in advance on a monthly or annual basis</li>
           <li>Prices are in GBP and include VAT where applicable</li>
@@ -104,14 +145,14 @@ export default function TermsOfServicePage() {
           <li>We may change prices with 30 days&apos; notice</li>
         </ul>
 
-        <h3>6.4 Refunds</h3>
+        <h3>7.4 Refunds</h3>
         <p>
           Annual subscriptions may be refunded within 14 days of purchase if you have not substantially used the Service. Monthly subscriptions are non-refundable. Contact support@taxfolio.uk for refund requests.
         </p>
       </section>
 
       <section>
-        <h2>7. Acceptable Use</h2>
+        <h2>8. Acceptable Use</h2>
         <p>You agree not to:</p>
         <ul>
           <li>Use the Service for any unlawful purpose or in violation of any laws</li>
@@ -127,7 +168,7 @@ export default function TermsOfServicePage() {
       </section>
 
       <section>
-        <h2>8. Intellectual Property</h2>
+        <h2>9. Intellectual Property</h2>
         <p>
           The Service, including its design, features, content, and underlying technology, is owned by TaxFolio and protected by intellectual property laws. You are granted a limited, non-exclusive, non-transferable licence to use the Service for its intended purpose.
         </p>
@@ -137,7 +178,7 @@ export default function TermsOfServicePage() {
       </section>
 
       <section>
-        <h2>9. AI-Generated Content</h2>
+        <h2>10. AI-Generated Content</h2>
         <p>
           TaxFolio uses artificial intelligence to categorise transactions and generate tax-related insights. You acknowledge that:
         </p>
@@ -151,7 +192,7 @@ export default function TermsOfServicePage() {
       </section>
 
       <section>
-        <h2>10. Disclaimer of Warranties</h2>
+        <h2>11. Disclaimer of Warranties</h2>
         <p>
           THE SERVICE IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
         </p>
@@ -167,7 +208,7 @@ export default function TermsOfServicePage() {
       </section>
 
       <section>
-        <h2>11. Limitation of Liability</h2>
+        <h2>12. Limitation of Liability</h2>
         <p>
           TO THE MAXIMUM EXTENT PERMITTED BY LAW:
         </p>
@@ -183,14 +224,14 @@ export default function TermsOfServicePage() {
       </section>
 
       <section>
-        <h2>12. Indemnification</h2>
+        <h2>13. Indemnification</h2>
         <p>
           You agree to indemnify and hold harmless TaxFolio, its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the Service, violation of these Terms, or infringement of any third-party rights.
         </p>
       </section>
 
       <section>
-        <h2>13. Termination</h2>
+        <h2>14. Termination</h2>
         <p>
           You may cancel your account at any time through your account settings or by contacting support.
         </p>
@@ -209,14 +250,14 @@ export default function TermsOfServicePage() {
       </section>
 
       <section>
-        <h2>14. Changes to Terms</h2>
+        <h2>15. Changes to Terms</h2>
         <p>
           We may modify these Terms at any time. Material changes will be notified via email or prominent notice on the Service at least 30 days before taking effect. Your continued use after changes take effect constitutes acceptance of the new Terms. If you do not agree to the changes, you must stop using the Service.
         </p>
       </section>
 
       <section>
-        <h2>15. Governing Law and Disputes</h2>
+        <h2>16. Governing Law and Disputes</h2>
         <p>
           These Terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.
         </p>
@@ -226,7 +267,7 @@ export default function TermsOfServicePage() {
       </section>
 
       <section>
-        <h2>16. General Provisions</h2>
+        <h2>17. General Provisions</h2>
         <ul>
           <li><strong>Entire Agreement:</strong> These Terms, together with our Privacy Policy and Cookie Policy, constitute the entire agreement between you and TaxFolio.</li>
           <li><strong>Severability:</strong> If any provision is found unenforceable, the remaining provisions remain in effect.</li>
@@ -237,7 +278,7 @@ export default function TermsOfServicePage() {
       </section>
 
       <section>
-        <h2>17. Contact Us</h2>
+        <h2>18. Contact Us</h2>
         <p>
           For questions about these Terms, please contact us:
         </p>
