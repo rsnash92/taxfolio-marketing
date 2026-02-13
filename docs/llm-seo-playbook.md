@@ -156,7 +156,7 @@ This is a template for defining your brand so AI systems understand you correctl
 
 **Credibility**
 - FCA-authorised bank connections via TrueLayer
-- HMRC-recognised MTD compatible software
+- MTD-compatible software
 - 256-bit encryption
 
 **Structured Data**
@@ -274,7 +274,7 @@ Output a clean content brief with recommended H2s, suggested H3s, and intent sum
 | Author | Add named authors | Founder name on all content |
 | Author | Add author bio | 2-4 lines: role, experience, credentials |
 | About page | Rewrite | Who Taxfolio is, what it does, why qualified |
-| Homepage | Credibility above fold | "HMRC Recognised", "FCA Authorised", "256-bit encryption" ✓ Already done |
+| Homepage | Credibility above fold | "MTD Compatible", "FCA Authorised", "256-bit encryption" ✓ Already done |
 | Content | Explain claims | Add "how" and "why" to every statement |
 | Trust | Contact info | Real email, business address, Companies House number |
 | Trust | Legal pages | Privacy, terms, cookie policy ✓ Already done |

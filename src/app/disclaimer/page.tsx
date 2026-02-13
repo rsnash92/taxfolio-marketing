@@ -54,7 +54,7 @@ export default function DisclaimerPage() {
       <section>
         <h2>HMRC Integration</h2>
         <p>
-          TaxFolio is recognised by HMRC as Making Tax Digital (MTD) compatible software. When
+          TaxFolio is Making Tax Digital (MTD) compatible software. When
           you submit information to HMRC through TaxFolio, it is transmitted directly to HMRC&apos;s
           systems.
         </p>

@@ -66,7 +66,7 @@ export function HeroLight() {
             </div>
             <div className="flex items-center gap-2">
               <Crown className="text-emerald-500 w-4 h-4" />
-              <span className="text-sm text-gray-600">HMRC Recognised</span>
+              <span className="text-sm text-gray-600">MTD Compatible</span>
             </div>
           </div>
 

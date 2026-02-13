@@ -325,7 +325,7 @@ export default function AlternateHomePage() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-white">MTD Ready</p>
-                    <p className="text-[10px] text-gray-400">HMRC compliant</p>
+                    <p className="text-[10px] text-gray-400">MTD compatible</p>
                   </div>
                 </div>
               </div>
@@ -495,7 +495,7 @@ export default function AlternateHomePage() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: Building2, title: "HMRC Recognised", desc: "MTD compatible software" },
+              { icon: Building2, title: "MTD Compatible", desc: "Making Tax Digital software" },
               { icon: Shield, title: "FCA Authorised", desc: "Bank connections via TrueLayer" },
               { icon: Lock, title: "Bank-Level Security", desc: "256-bit encryption" },
               { icon: Smartphone, title: "Works Everywhere", desc: "Phone, tablet & desktop" },

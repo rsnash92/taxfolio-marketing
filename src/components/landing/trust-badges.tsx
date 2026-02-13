@@ -3,8 +3,8 @@ import { Shield, Building2, Lock, Smartphone } from 'lucide-react'
 const badges = [
   {
     icon: Building2,
-    title: 'HMRC Recognised',
-    subtitle: 'MTD compatible software',
+    title: 'MTD Compatible',
+    subtitle: 'Making Tax Digital software',
   },
   {
     icon: Shield,
